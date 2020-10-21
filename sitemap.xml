@@ -3,6 +3,76 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>/tags.html</loc>
+    <lastmod>2020-10-21T20:26:08+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/vscode%E9%85%8D%E7%BD%AE.html</loc>
+    <lastmod>2020-10-21T20:26:08+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>/post/%E5%A6%82%E4%BD%95%E5%BF%AB%E9%80%9F%E5%9C%A8vscode%E9%85%8D%E7%BD%AEcc&#43;&#43;%E7%8E%AF%E5%A2%83.html</loc>
+    <lastmod>2020-10-21T20:26:08+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>/</loc>
+    <lastmod>2020-10-21T20:26:08+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/windows.html</loc>
+    <lastmod>2020-10-21T20:25:08+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>/post/%E4%B8%80%E4%B8%AA%E9%B2%9C%E4%B8%BA%E4%BA%BA%E7%9F%A5%E4%BD%86%E5%BE%88%E5%AE%9E%E7%94%A8%E7%9A%84windows%E5%AE%9E%E7%94%A8%E6%8A%80%E5%B7%A7.html</loc>
+    <lastmod>2020-10-21T20:25:08+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/construct3.html</loc>
+    <lastmod>2020-10-21T20:24:08+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>/post/%E5%A6%82%E4%BD%95%E5%9C%A8construct3%E4%B8%8A%E5%BC%80%E5%8F%91%E6%B8%B8%E6%88%8F%E6%B8%B8%E6%88%8F%E5%B1%95%E7%A4%BA.html</loc>
+    <lastmod>2020-10-21T20:24:08+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/dosbox.html</loc>
+    <lastmod>2020-10-21T20:22:08+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>/post/dosbox%E7%9A%84%E5%AE%89%E8%A3%85%E5%92%8C%E4%BD%BF%E7%94%A8.html</loc>
+    <lastmod>2020-10-21T20:22:08+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>/tags/hugo-gitee-blog.html</loc>
     <lastmod>2020-10-21T13:40:08+00:00</lastmod>
     <changefreq>monthly</changefreq>
@@ -17,21 +87,35 @@
   </url>
   
   <url>
-    <loc>/tags.html</loc>
-    <lastmod>2020-10-21T13:40:08+00:00</lastmod>
+    <loc>/tags/vscode-launch.json.html</loc>
+    <lastmod>2020-10-21T13:22:08+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>/</loc>
-    <lastmod>2020-10-21T13:40:08+00:00</lastmod>
+    <loc>/post/vscode%E5%85%B3%E4%BA%8Elaunch.json%E4%BD%BF%E7%94%A8%E7%9A%84%E5%B0%8F%E6%8A%80%E5%B7%A7.html</loc>
+    <lastmod>2020-10-21T13:22:08+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>/post/%E5%A6%82%E4%BD%95%E5%B0%86vscode%E4%BB%A3%E7%A0%81%E5%BF%AB%E9%80%9F%E5%90%8C%E6%AD%A5%E5%88%B0githubgitee%E4%B8%8A.html</loc>
+    <lastmod>2020-10-21T13:22:08+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>/post/%E5%A6%82%E4%BD%95%E5%BF%AB%E9%80%9F%E8%B7%A8%E8%AE%BE%E5%A4%87%E5%88%86%E4%BA%AB%E7%BD%91%E9%A1%B5.html</loc>
+    <lastmod>2020-10-21T13:22:08+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/%E8%B7%A8%E8%AE%BE%E5%A4%87%E5%88%86%E4%BA%AB.html</loc>
     <lastmod>2020-10-21T13:22:08+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -47,20 +131,6 @@
   <url>
     <loc>/post/hugo&#43;github-%E6%9E%84%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2windows%E7%8E%AF%E5%A2%83%E4%B8%8B.html</loc>
     <lastmod>2020-10-21T13:07:08+00:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>/post/chapter-1.html</loc>
-    <lastmod>2017-04-09T10:58:08-04:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>/tags/scene.html</loc>
-    <lastmod>2017-04-09T10:58:08-04:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>

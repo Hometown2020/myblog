@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>如何快速在vscode配置C/C&#43;&#43;环境 | My blog</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="相信许多刚开始使用vscode的小伙伴们都有过这样的感受，明明按着网上的教程一步一步来，最终却总会出现一些奇奇怪怪的问题；配了几个小时之后还是失败。。 小编也是这么一路走过来的，现在给大家分享一下小编的成功秘籍~
+1.卸载重装vscode 如果你确定你的电脑上从没装过vscode，那么直接跳到下一步；如果你电脑上还装着或者曾装过，那么请按接下来的操作，否则可能最后配置失败哦~
+  卸载vscode
+  删除残留数据
+ C:\Users\Administrator\.vscode,C:\Users\Administrator\AppData\Roaming\Code 这两个位置的数据全部删除掉 Administrator:这个文件夹在不同的电脑上的名称可能不同    重启电脑
+  2.下载vscode  官网链接：https://code.visualstudio.com/ 安装时一直下一步就好了  3.下载MinGW  下载链接：https://sourceforge.net/projects/mingw-w64/files/ 找到最新版的 &ldquo;x86_64-posix-seh&quot;下载 如图 解压缩到任意位置  4.配置环境变量   打开解压缩文件夹的bin文件夹，复制路径，如图
+  注意：如果出现此文件夹为空，可能是因为电脑的杀毒软件误删除了里面的文件，这是需要暂时关闭电脑的杀毒软件再进行解压缩    打开系统高级设置-&gt;环境变量-&gt;Path-&gt;编辑-&gt;新建，将刚才复制的路径粘贴进来，然后一路确定即可。   验证配置是否成功 win&#43;R，输入cmd，回车，输入g&#43;&#43; -v，如果结果如下图，说明配置成功如果结果为：&lsquo;g&#43;&#43;&lsquo;不是内部或外部命令，也不是可运行的程序或批处理文件。则失败。
+  5.配置c/c&#43;&#43;环境  重启vscode 配置中文（不需要的同学跳过该步）  点击左边的扩展，输入Chinese，选择图中的插件，安装后重启vscode即可   新建文件夹  新建文件（如：helloworld.cpp）  打一段简单的hello world代码    按下Ctrl&#43; F5 （或Ctrl&#43; Fn &#43;F5），点击C&#43;&#43;(GDB/LLDB) 点击 会自动生成launch.">
+    <meta name="generator" content="Hugo 0.75.1" />
+    
+    
+      <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+    
+
+    
+    
+      <link href="../dist/css/app.4fc0b62e4b82c997bb0041217cd6b979.css" rel="stylesheet">
+    
+
+    
+
+    
+      
+
+    
+
+    
+    
+    <meta property="og:title" content="如何快速在vscode配置C/C&#43;&#43;环境" />
+<meta property="og:description" content="相信许多刚开始使用vscode的小伙伴们都有过这样的感受，明明按着网上的教程一步一步来，最终却总会出现一些奇奇怪怪的问题；配了几个小时之后还是失败。。 小编也是这么一路走过来的，现在给大家分享一下小编的成功秘籍~
+1.卸载重装vscode 如果你确定你的电脑上从没装过vscode，那么直接跳到下一步；如果你电脑上还装着或者曾装过，那么请按接下来的操作，否则可能最后配置失败哦~
+  卸载vscode
+  删除残留数据
+ C:\Users\Administrator\.vscode,C:\Users\Administrator\AppData\Roaming\Code 这两个位置的数据全部删除掉 Administrator:这个文件夹在不同的电脑上的名称可能不同    重启电脑
+  2.下载vscode  官网链接：https://code.visualstudio.com/ 安装时一直下一步就好了  3.下载MinGW  下载链接：https://sourceforge.net/projects/mingw-w64/files/ 找到最新版的 &ldquo;x86_64-posix-seh&quot;下载 如图 解压缩到任意位置  4.配置环境变量   打开解压缩文件夹的bin文件夹，复制路径，如图
+  注意：如果出现此文件夹为空，可能是因为电脑的杀毒软件误删除了里面的文件，这是需要暂时关闭电脑的杀毒软件再进行解压缩    打开系统高级设置-&gt;环境变量-&gt;Path-&gt;编辑-&gt;新建，将刚才复制的路径粘贴进来，然后一路确定即可。   验证配置是否成功 win&#43;R，输入cmd，回车，输入g&#43;&#43; -v，如果结果如下图，说明配置成功如果结果为：&lsquo;g&#43;&#43;&lsquo;不是内部或外部命令，也不是可运行的程序或批处理文件。则失败。
+  5.配置c/c&#43;&#43;环境  重启vscode 配置中文（不需要的同学跳过该步）  点击左边的扩展，输入Chinese，选择图中的插件，安装后重启vscode即可   新建文件夹  新建文件（如：helloworld.cpp）  打一段简单的hello world代码    按下Ctrl&#43; F5 （或Ctrl&#43; Fn &#43;F5），点击C&#43;&#43;(GDB/LLDB) 点击 会自动生成launch." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/post/%E5%A6%82%E4%BD%95%E5%BF%AB%E9%80%9F%E5%9C%A8vscode%E9%85%8D%E7%BD%AEcc&#43;&#43;%E7%8E%AF%E5%A2%83.html" />
+<meta property="article:published_time" content="2020-10-21T20:26:08+00:00" />
+<meta property="article:modified_time" content="2020-10-21T20:26:08+00:00" />
+<meta itemprop="name" content="如何快速在vscode配置C/C&#43;&#43;环境">
+<meta itemprop="description" content="相信许多刚开始使用vscode的小伙伴们都有过这样的感受，明明按着网上的教程一步一步来，最终却总会出现一些奇奇怪怪的问题；配了几个小时之后还是失败。。 小编也是这么一路走过来的，现在给大家分享一下小编的成功秘籍~
+1.卸载重装vscode 如果你确定你的电脑上从没装过vscode，那么直接跳到下一步；如果你电脑上还装着或者曾装过，那么请按接下来的操作，否则可能最后配置失败哦~
+  卸载vscode
+  删除残留数据
+ C:\Users\Administrator\.vscode,C:\Users\Administrator\AppData\Roaming\Code 这两个位置的数据全部删除掉 Administrator:这个文件夹在不同的电脑上的名称可能不同    重启电脑
+  2.下载vscode  官网链接：https://code.visualstudio.com/ 安装时一直下一步就好了  3.下载MinGW  下载链接：https://sourceforge.net/projects/mingw-w64/files/ 找到最新版的 &ldquo;x86_64-posix-seh&quot;下载 如图 解压缩到任意位置  4.配置环境变量   打开解压缩文件夹的bin文件夹，复制路径，如图
+  注意：如果出现此文件夹为空，可能是因为电脑的杀毒软件误删除了里面的文件，这是需要暂时关闭电脑的杀毒软件再进行解压缩    打开系统高级设置-&gt;环境变量-&gt;Path-&gt;编辑-&gt;新建，将刚才复制的路径粘贴进来，然后一路确定即可。   验证配置是否成功 win&#43;R，输入cmd，回车，输入g&#43;&#43; -v，如果结果如下图，说明配置成功如果结果为：&lsquo;g&#43;&#43;&lsquo;不是内部或外部命令，也不是可运行的程序或批处理文件。则失败。
+  5.配置c/c&#43;&#43;环境  重启vscode 配置中文（不需要的同学跳过该步）  点击左边的扩展，输入Chinese，选择图中的插件，安装后重启vscode即可   新建文件夹  新建文件（如：helloworld.cpp）  打一段简单的hello world代码    按下Ctrl&#43; F5 （或Ctrl&#43; Fn &#43;F5），点击C&#43;&#43;(GDB/LLDB) 点击 会自动生成launch.">
+<meta itemprop="datePublished" content="2020-10-21T20:26:08+00:00" />
+<meta itemprop="dateModified" content="2020-10-21T20:26:08+00:00" />
+<meta itemprop="wordCount" content="77">
+
+
+
+<meta itemprop="keywords" content="vscode配置," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="如何快速在vscode配置C/C&#43;&#43;环境"/>
+<meta name="twitter:description" content="相信许多刚开始使用vscode的小伙伴们都有过这样的感受，明明按着网上的教程一步一步来，最终却总会出现一些奇奇怪怪的问题；配了几个小时之后还是失败。。 小编也是这么一路走过来的，现在给大家分享一下小编的成功秘籍~
+1.卸载重装vscode 如果你确定你的电脑上从没装过vscode，那么直接跳到下一步；如果你电脑上还装着或者曾装过，那么请按接下来的操作，否则可能最后配置失败哦~
+  卸载vscode
+  删除残留数据
+ C:\Users\Administrator\.vscode,C:\Users\Administrator\AppData\Roaming\Code 这两个位置的数据全部删除掉 Administrator:这个文件夹在不同的电脑上的名称可能不同    重启电脑
+  2.下载vscode  官网链接：https://code.visualstudio.com/ 安装时一直下一步就好了  3.下载MinGW  下载链接：https://sourceforge.net/projects/mingw-w64/files/ 找到最新版的 &ldquo;x86_64-posix-seh&quot;下载 如图 解压缩到任意位置  4.配置环境变量   打开解压缩文件夹的bin文件夹，复制路径，如图
+  注意：如果出现此文件夹为空，可能是因为电脑的杀毒软件误删除了里面的文件，这是需要暂时关闭电脑的杀毒软件再进行解压缩    打开系统高级设置-&gt;环境变量-&gt;Path-&gt;编辑-&gt;新建，将刚才复制的路径粘贴进来，然后一路确定即可。   验证配置是否成功 win&#43;R，输入cmd，回车，输入g&#43;&#43; -v，如果结果如下图，说明配置成功如果结果为：&lsquo;g&#43;&#43;&lsquo;不是内部或外部命令，也不是可运行的程序或批处理文件。则失败。
+  5.配置c/c&#43;&#43;环境  重启vscode 配置中文（不需要的同学跳过该步）  点击左边的扩展，输入Chinese，选择图中的插件，安装后重启vscode即可   新建文件夹  新建文件（如：helloworld.cpp）  打一段简单的hello world代码    按下Ctrl&#43; F5 （或Ctrl&#43; Fn &#43;F5），点击C&#43;&#43;(GDB/LLDB) 点击 会自动生成launch."/>
+
+	
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="../" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        My blog
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+        <ul class="pl0 mr3">
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="../about.html" title="About page">
+              About
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="../post.html" title="Articles page">
+              Articles
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="../contact.html" title="Contact page">
+              Contact
+            </a>
+          </li>
+          
+        </ul>
+      
+      
+
+
+
+
+<a href="https://twitter.com/GoHugoIO" target="_blank" class="link-transition twitter link dib z-999 pt3 pt0-l mr1" title="Twitter link" rel="noopener" aria-label="follow on Twitter——Opens in a new window">
+  <svg height="32px"  style="enable-background:new 0 0 67 67;" version="1.1" viewBox="0 0 67 67" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M37.167,22.283c-2.619,0.953-4.274,3.411-4.086,6.101  l0.063,1.038l-1.048-0.127c-3.813-0.487-7.145-2.139-9.974-4.915l-1.383-1.377l-0.356,1.017c-0.754,2.267-0.272,4.661,1.299,6.271  c0.838,0.89,0.649,1.017-0.796,0.487c-0.503-0.169-0.943-0.296-0.985-0.233c-0.146,0.149,0.356,2.076,0.754,2.839  c0.545,1.06,1.655,2.097,2.871,2.712l1.027,0.487l-1.215,0.021c-1.173,0-1.215,0.021-1.089,0.467  c0.419,1.377,2.074,2.839,3.918,3.475l1.299,0.444l-1.131,0.678c-1.676,0.976-3.646,1.526-5.616,1.568  C19.775,43.256,19,43.341,19,43.405c0,0.211,2.557,1.397,4.044,1.864c4.463,1.377,9.765,0.783,13.746-1.568  c2.829-1.673,5.657-5,6.978-8.221c0.713-1.716,1.425-4.851,1.425-6.354c0-0.975,0.063-1.102,1.236-2.267  c0.692-0.678,1.341-1.419,1.467-1.631c0.21-0.403,0.188-0.403-0.88-0.043c-1.781,0.636-2.033,0.551-1.152-0.402  c0.649-0.678,1.425-1.907,1.425-2.267c0-0.063-0.314,0.042-0.671,0.233c-0.377,0.212-1.215,0.53-1.844,0.72l-1.131,0.361l-1.027-0.7  c-0.566-0.381-1.361-0.805-1.781-0.932C39.766,21.902,38.131,21.944,37.167,22.283z M33,64C16.432,64,3,50.569,3,34S16.432,4,33,4  s30,13.431,30,30S49.568,64,33,64z" style="fill-rule:evenodd;clip-rule:evenodd;fill:;"/></svg>
+
+<span class="new-window"><svg  height="8px"  style="enable-background:new 0 0 1000 1000;" version="1.1" viewBox="0 0 1000 1000" width="8px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+<path d="M598 128h298v298h-86v-152l-418 418-60-60 418-418h-152v-86zM810 810v-298h86v298c0 46-40 86-86 86h-596c-48 0-86-40-86-86v-596c0-46 38-86 86-86h298v86h-298v596h596z" style="fill-rule:evenodd;clip-rule:evenodd;fill:;"/>
+</svg>
+</span></a>
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked">
+          
+        ARTICLES
+      </aside>
+      
+
+
+
+
+  <div id="sharing" class="mt3">
+
+    
+    <a href="https://www.facebook.com/sharer.php?u=/post/%E5%A6%82%E4%BD%95%E5%BF%AB%E9%80%9F%E5%9C%A8vscode%E9%85%8D%E7%BD%AEcc&#43;&#43;%E7%8E%AF%E5%A2%83.html" class="facebook no-underline" aria-label="share on Facebook">
+      <svg height="32px"  style="enable-background:new 0 0 67 67;" version="1.1" viewBox="0 0 67 67" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M28.765,50.32h6.744V33.998h4.499l0.596-5.624h-5.095  l0.007-2.816c0-1.466,0.14-2.253,2.244-2.253h2.812V17.68h-4.5c-5.405,0-7.307,2.729-7.307,7.317v3.377h-3.369v5.625h3.369V50.32z   M33,64C16.432,64,3,50.569,3,34S16.432,4,33,4s30,13.431,30,30S49.568,64,33,64z" style="fill-rule:evenodd;clip-rule:evenodd;"/></svg>
+
+    </a>
+
+    
+    
+    <a href="https://twitter.com/share?url=../post/%E5%A6%82%E4%BD%95%E5%BF%AB%E9%80%9F%E5%9C%A8vscode%E9%85%8D%E7%BD%AEcc&#43;&#43;%E7%8E%AF%E5%A2%83.html&amp;text=%e5%a6%82%e4%bd%95%e5%bf%ab%e9%80%9f%e5%9c%a8vscode%e9%85%8d%e7%bd%aeC/C&#43;&#43;%e7%8e%af%e5%a2%83" class="twitter no-underline" aria-label="share on Twitter">
+      <svg height="32px"  style="enable-background:new 0 0 67 67;" version="1.1" viewBox="0 0 67 67" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M37.167,22.283c-2.619,0.953-4.274,3.411-4.086,6.101  l0.063,1.038l-1.048-0.127c-3.813-0.487-7.145-2.139-9.974-4.915l-1.383-1.377l-0.356,1.017c-0.754,2.267-0.272,4.661,1.299,6.271  c0.838,0.89,0.649,1.017-0.796,0.487c-0.503-0.169-0.943-0.296-0.985-0.233c-0.146,0.149,0.356,2.076,0.754,2.839  c0.545,1.06,1.655,2.097,2.871,2.712l1.027,0.487l-1.215,0.021c-1.173,0-1.215,0.021-1.089,0.467  c0.419,1.377,2.074,2.839,3.918,3.475l1.299,0.444l-1.131,0.678c-1.676,0.976-3.646,1.526-5.616,1.568  C19.775,43.256,19,43.341,19,43.405c0,0.211,2.557,1.397,4.044,1.864c4.463,1.377,9.765,0.783,13.746-1.568  c2.829-1.673,5.657-5,6.978-8.221c0.713-1.716,1.425-4.851,1.425-6.354c0-0.975,0.063-1.102,1.236-2.267  c0.692-0.678,1.341-1.419,1.467-1.631c0.21-0.403,0.188-0.403-0.88-0.043c-1.781,0.636-2.033,0.551-1.152-0.402  c0.649-0.678,1.425-1.907,1.425-2.267c0-0.063-0.314,0.042-0.671,0.233c-0.377,0.212-1.215,0.53-1.844,0.72l-1.131,0.361l-1.027-0.7  c-0.566-0.381-1.361-0.805-1.781-0.932C39.766,21.902,38.131,21.944,37.167,22.283z M33,64C16.432,64,3,50.569,3,34S16.432,4,33,4  s30,13.431,30,30S49.568,64,33,64z" style="fill-rule:evenodd;clip-rule:evenodd;fill:;"/></svg>
+
+    </a>
+
+    
+    <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=../post/%E5%A6%82%E4%BD%95%E5%BF%AB%E9%80%9F%E5%9C%A8vscode%E9%85%8D%E7%BD%AEcc&#43;&#43;%E7%8E%AF%E5%A2%83.html&amp;title=%e5%a6%82%e4%bd%95%e5%bf%ab%e9%80%9f%e5%9c%a8vscode%e9%85%8d%e7%bd%aeC/C&#43;&#43;%e7%8e%af%e5%a2%83" class="linkedin no-underline" aria-label="share on LinkedIn">
+      <svg  height="32px"  style="enable-background:new 0 0 65 65;" version="1.1" viewBox="0 0 65 65" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <path d="M50.837,48.137V36.425c0-6.275-3.35-9.195-7.816-9.195  c-3.604,0-5.219,1.983-6.119,3.374V27.71h-6.79c0.09,1.917,0,20.427,0,20.427h6.79V36.729c0-0.609,0.044-1.219,0.224-1.655  c0.49-1.22,1.607-2.483,3.482-2.483c2.458,0,3.44,1.873,3.44,4.618v10.929H50.837z M22.959,24.922c2.367,0,3.842-1.57,3.842-3.531  c-0.044-2.003-1.475-3.528-3.797-3.528s-3.841,1.524-3.841,3.528c0,1.961,1.474,3.531,3.753,3.531H22.959z M34,64  C17.432,64,4,50.568,4,34C4,17.431,17.432,4,34,4s30,13.431,30,30C64,50.568,50.568,64,34,64z M26.354,48.137V27.71h-6.789v20.427  H26.354z" style="fill-rule:evenodd;clip-rule:evenodd;fill:;"/>
+</svg>
+
+    </a>
+  </div>
+
+
+      <h1 class="f1 athelas mt3 mb1">如何快速在vscode配置C/C&#43;&#43;环境</h1>
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2020-10-21T20:26:08Z">October 21, 2020</time>
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l w-two-thirds-l"><p>相信许多刚开始使用vscode的小伙伴们都有过这样的感受，明明按着网上的教程一步一步来，最终却总会出现一些奇奇怪怪的问题；配了几个小时之后还是失败。。
+小编也是这么一路走过来的，现在给大家分享一下小编的成功秘籍~</p>
+<h1 id="1卸载重装vscode">1.卸载重装vscode</h1>
+<p>如果你确定你的电脑上从没装过vscode，那么直接跳到下一步；如果你电脑上还装着或者曾装过，那么请按接下来的操作，否则可能最后配置失败哦~</p>
+<ul>
+<li>
+<p>卸载vscode</p>
+</li>
+<li>
+<p>删除残留数据</p>
+<ul>
+<li><code>C:\Users\Administrator\.vscode</code>,<code>C:\Users\Administrator\AppData\Roaming\Code</code></li>
+<li>这两个位置的数据全部删除掉</li>
+<li>Administrator:这个文件夹在不同的电脑上的名称可能不同</li>
+</ul>
+</li>
+<li>
+<p>重启电脑</p>
+</li>
+</ul>
+<h1 id="2下载vscode">2.下载vscode</h1>
+<ul>
+<li>官网链接：<a href="https://code.visualstudio.com/">https://code.visualstudio.com/</a></li>
+<li>安装时一直下一步就好了</li>
+</ul>
+<h1 id="3下载mingw">3.下载MinGW</h1>
+<ul>
+<li>下载链接：<a href="https://sourceforge.net/projects/mingw-w64/files/">https://sourceforge.net/projects/mingw-w64/files/</a></li>
+<li>找到最新版的 &ldquo;x86_64-posix-seh&quot;下载</li>
+<li>如图<img src="https://img-blog.csdnimg.cn/20201009154508364.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1OTc1NzU3,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></li>
+<li>解压缩到任意位置</li>
+</ul>
+<h1 id="4配置环境变量">4.配置环境变量</h1>
+<ul>
+<li>
+<p>打开解压缩文件夹的bin文件夹，复制路径，如图</p>
+<ul>
+<li><img src="https://img-blog.csdnimg.cn/20201009155139864.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1OTc1NzU3,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></li>
+<li>注意：如果出现此文件夹为空，可能是因为电脑的杀毒软件误删除了里面的文件，这是需要暂时关闭电脑的杀毒软件再进行解压缩</li>
+</ul>
+</li>
+<li>
+<p>打开系统高级设置-&gt;环境变量-&gt;Path-&gt;编辑-&gt;新建，将刚才复制的路径粘贴进来，然后一路确定即可。
+<img src="https://img-blog.csdnimg.cn/20201009155834427.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1OTc1NzU3,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
+</li>
+<li>
+<p>验证配置是否成功
+win+R，输入cmd，回车，输入g++ -v，如果结果如下图，说明配置成功<img src="https://img-blog.csdnimg.cn/20201009160300147.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1OTc1NzU3,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述">
+如果结果为：&lsquo;g++&lsquo;不是内部或外部命令，也不是可运行的程序或批处理文件。则失败。</p>
+</li>
+</ul>
+<h1 id="5配置cc环境">5.配置c/c++环境</h1>
+<ul>
+<li>重启vscode</li>
+<li>配置中文（不需要的同学跳过该步）
+<ul>
+<li>点击左边的扩展，输入Chinese，选择图中的插件，安装后重启vscode即可<img src="https://img-blog.csdnimg.cn/20201009160854706.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1OTc1NzU3,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></li>
+</ul>
+</li>
+<li>新建文件夹</li>
+<li><img src="https://img-blog.csdnimg.cn/20201009161044649.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1OTc1NzU3,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></li>
+<li>新建文件（如：helloworld.cpp）
+<ul>
+<li>打一段简单的hello world代码
+<img src="https://img-blog.csdnimg.cn/20201009161240751.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1OTc1NzU3,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></li>
+</ul>
+</li>
+<li>按下Ctrl+ F5 （或Ctrl+ Fn +F5），点击C++(GDB/LLDB)
+<img src="https://img-blog.csdnimg.cn/20201009161604818.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1OTc1NzU3,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述">
+点击
+<img src="https://img-blog.csdnimg.cn/20201009161652727.png#pic_center" alt="在这里插入图片描述">
+会自动生成<code>launch.json</code>和<code>tasks.json</code>文件
+<img src="https://img-blog.csdnimg.cn/20201009161816210.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1OTc1NzU3,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述">
+细节修改如图
+<img src="https://img-blog.csdnimg.cn/20201009162416327.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1OTc1NzU3,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述">
+再返回helloworld.cpp界面，按Ctrl+ F5，发现编译成功了！
+<img src="https://img-blog.csdnimg.cn/20201009162611851.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1OTc1NzU3,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></li>
+</ul>
+<h1 id="6超完整的配置文件">6.超完整的配置文件</h1>
+<p>这是一份更加完整的配置文件，有需要的可以下载，覆盖原来的.vscode文件夹。
+文件下载链接：<a href="https://download.csdn.net/download/qq_45975757/12916060">https://download.csdn.net/download/qq_45975757/12916060</a></p>
+<h1 id="7常用扩展推荐">7.常用扩展推荐</h1>
+<ul>
+<li>C/C++</li>
+<li>C/C++ Compile Run</li>
+<li>Code Runner</li>
+<li>Visual Studio IntelliCode</li>
+</ul>
+<p>(新增推荐)</p>
+<ul>
+<li>
+<p>Bracket Pair Colorizer 2:突出显示成对的括号</p>
+</li>
+<li>
+<p>local history : 保留修改历史，防止误删（工程的根目录会生成一个.history目录）（可以把.history加入到.gitignore中，就不会把历史文件提交到git中）</p>
+</li>
+<li>
+<p>TODO Highlight ：（写代码过程中，突然发现一个Bug，但是又不想停下来手中的活，以免打断思路，怎么办？按代码编写会规范，都是建议在代码中加个TODO注释。比如这样</p>
+<blockquote>
+<p>//TODO:这里有个bug</p>
+</blockquote>
+<p>或</p>
+<blockquote>
+<p>//FIXME:???</p>
+</blockquote>
+</li>
+</ul>
+<h1 id="8注意">8.注意</h1>
+<p>之后新建的.cpp/.c文件应放在.vscode文件夹的父文件夹里面，否则可能会出现需要重新选择环境的情况。<img src="https://img-blog.csdnimg.cn/20201009161604818.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1OTc1NzU3,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述">
+之所以会这样是因为配置没用被应用于全局。（问题小编已解决，详情请见“<a href="https://blog.csdn.net/qq_45975757/article/details/109037302">教你如何快速解决需要在每个新项目新建launch.json文件的问题？</a>”）</p>
+<h1 id="9后记">9.后记</h1>
+<p>现在环境终于配好了，快上机体验一下这个号称“宇内第一编辑器”的威力吧！</p>
+<p>最后，小编整理不易，觉得有用的话就给个赞吧，你的认可是对小编最大的鼓励~</p>
+<ul class="pa0">
+  
+   <li class="list">
+     <a href="../tags/vscode%E9%85%8D%E7%BD%AE" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">vscode配置</a>
+   </li>
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+        <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "梦里轻烟" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+      
+      <div id="commento"></div>
+<script defer src="https://cdn.commento.io/js/commento.js"></script>
+
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="" >
+    &copy;  My blog 2020 
+  </a>
+    <div>
+
+
+
+
+<a href="https://twitter.com/GoHugoIO" target="_blank" class="link-transition twitter link dib z-999 pt3 pt0-l mr1" title="Twitter link" rel="noopener" aria-label="follow on Twitter——Opens in a new window">
+  <svg height="32px"  style="enable-background:new 0 0 67 67;" version="1.1" viewBox="0 0 67 67" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M37.167,22.283c-2.619,0.953-4.274,3.411-4.086,6.101  l0.063,1.038l-1.048-0.127c-3.813-0.487-7.145-2.139-9.974-4.915l-1.383-1.377l-0.356,1.017c-0.754,2.267-0.272,4.661,1.299,6.271  c0.838,0.89,0.649,1.017-0.796,0.487c-0.503-0.169-0.943-0.296-0.985-0.233c-0.146,0.149,0.356,2.076,0.754,2.839  c0.545,1.06,1.655,2.097,2.871,2.712l1.027,0.487l-1.215,0.021c-1.173,0-1.215,0.021-1.089,0.467  c0.419,1.377,2.074,2.839,3.918,3.475l1.299,0.444l-1.131,0.678c-1.676,0.976-3.646,1.526-5.616,1.568  C19.775,43.256,19,43.341,19,43.405c0,0.211,2.557,1.397,4.044,1.864c4.463,1.377,9.765,0.783,13.746-1.568  c2.829-1.673,5.657-5,6.978-8.221c0.713-1.716,1.425-4.851,1.425-6.354c0-0.975,0.063-1.102,1.236-2.267  c0.692-0.678,1.341-1.419,1.467-1.631c0.21-0.403,0.188-0.403-0.88-0.043c-1.781,0.636-2.033,0.551-1.152-0.402  c0.649-0.678,1.425-1.907,1.425-2.267c0-0.063-0.314,0.042-0.671,0.233c-0.377,0.212-1.215,0.53-1.844,0.72l-1.131,0.361l-1.027-0.7  c-0.566-0.381-1.361-0.805-1.781-0.932C39.766,21.902,38.131,21.944,37.167,22.283z M33,64C16.432,64,3,50.569,3,34S16.432,4,33,4  s30,13.431,30,30S49.568,64,33,64z" style="fill-rule:evenodd;clip-rule:evenodd;fill:;"/></svg>
+
+<span class="new-window"><svg  height="8px"  style="enable-background:new 0 0 1000 1000;" version="1.1" viewBox="0 0 1000 1000" width="8px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+<path d="M598 128h298v298h-86v-152l-418 418-60-60 418-418h-152v-86zM810 810v-298h86v298c0 46-40 86-86 86h-596c-48 0-86-40-86-86v-596c0-46 38-86 86-86h298v86h-298v596h596z" style="fill-rule:evenodd;clip-rule:evenodd;fill:;"/>
+</svg>
+</span></a>
+
+
+
+
+
+
+
+
+
+
+
+</div>
+  </div>
+</footer>
+
+    
+
+  <script src="../dist/js/app.3fc0f988d21662902933.js"></script>
+
+
+  </body>
+</html>
