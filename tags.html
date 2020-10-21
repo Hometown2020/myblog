@@ -36,7 +36,7 @@
 <meta property="og:description" content="The last blog you&#39;ll ever need. Maybe." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="/tags.html" />
-<meta property="og:updated_time" content="2017-04-12T11:14:48-04:00" />
+<meta property="og:updated_time" content="2020-10-21T13:40:08+00:00" />
 <meta itemprop="name" content="Tags">
 <meta itemprop="description" content="The last blog you&#39;ll ever need. Maybe.">
 <meta name="twitter:card" content="summary"/>
@@ -137,8 +137,8 @@
     <section class="ph4">
       
         <h2 class="f1">
-          <a href="./tags/scene" class="link blue hover-black">
-            Tag: scene
+          <a href="./tags/hugo-gitee-blog" class="link blue hover-black">
+            Tag: hugo-gitee-blog
           </a>
         </h2>
         
@@ -146,16 +146,68 @@
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Post</span>
     <h1 class="f3 near-black">
-      <a href="./post/chapter-4.html" class="link black dim">
-        Chapter IV: Master Jacques Coppenole
+      <a href="./post/%E7%94%A8hugo%E5%9C%A8gitee%E4%B8%8A%E6%9E%84%E5%BB%BA%E5%8D%9A%E5%AE%A2windows%E7%8E%AF%E5%A2%83%E4%B8%8B.html" class="link black dim">
+        Hugo&#43;gitee 构建个人博客
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      While the pensioner of Ghent and his eminence were exchanging very low bows and a few words in voices still lower, a man of lofty stature, with a large face and broad shoulders, presented himself, in order to enter abreast with Guillaume Rym; one would have pronounced him a bull-dog by the side of a fox. His felt doublet and leather jerkin made a spot on the velvet and silk which surrounded him.
+      用Hugo在gitee上构建博客（Windows环境下） 大家好！这是我第一次在gitee上搭建博客，也是我第一次写博客。作为一个博客小白，我在搭建博客的过程中走了很多弯路，但也收获了丰富的经验。现在我把自己搭建博客的过程分享给大家，希望能帮助到有需要的人。当然其中还有很多不足之处，欢迎各位大佬指教！
+1.为什么要用gitee？ 相信很多朋友都觉得用GitHub搭建博客会更好，那为什么还要使用gitee呢，下面我总结了几点使用gitee的优点：
+ 更流畅的访问 由于某些众所周知的原因，GitHub有些时候可能无法访问或访问缓慢，gitee由于服务器在国内，访问速度还是很不错的；（呀！在小编写这篇博客的当天有很多朋友表示无法访问GitHub~） 私有仓库 相比于GitHub，gitee提供了私有仓库的功能，给代码在网上的托管提供了更多的选择。 (更新：GitHub现在好像也支持私有仓库了)  2.安装git  安装地址：https://git-scm.com/download/win 安装时一路next就完事了 成功后右键可以看到 git bash  3.安装Hugo   安装地址https://github.com/gohugoio/hugo/releases   创建一个Hugo文件夹，打开并创建子文件夹bin,sites(以后在本地写博客的位置)，将压缩包解压到bin文件夹中
+  将hugo添加到系统路径
+ 打开系统高级设置-&gt;环境变量，点击 用户变量中的Path，点击编辑，点击右上角新建，将上面的bin文件夹的地址复制粘贴，回车键，点击确定    验证是否安装成功 git bash中输入
+ hugo version
+   4.创建远程仓库   注册gitee账号
+  点击右上角“+”号新建仓库
+  自定义仓库名（无需跟用户名相同）
+  是否开源：公开
+  创建
+现在你有了自己的仓库，记得记下仓库地址，后边要用到哦~
+  5.搭建博客 （以下所有命令都在git bash中输入）   新建博客
+在sites文件夹中
     </div>
   </div>
 </div>
 
+        
+      
+        <h2 class="f1">
+          <a href="./tags/hugo-github-blog" class="link blue hover-black">
+            Tag: hugo-github-blog
+          </a>
+        </h2>
+        
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Post</span>
+    <h1 class="f3 near-black">
+      <a href="./post/hugo&#43;github-%E6%9E%84%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2windows%E7%8E%AF%E5%A2%83%E4%B8%8B.html" class="link black dim">
+        Hugo&#43;github 构建个人博客
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      Hugo+Github 搭建个人博客（Windows环境下） 1.前言 由于在GitHub上部署博客跟在gitee上的流程基本一致，所以本文只给出了在GitHub上部署的差别以及可能出现的问题的处理。具体流程参考：用Hugo在gitee上构建博客（Windows环境下）
+2.Differences 2.1 https vs SSH   区别：前者可以随意克隆github上的项目，不管是谁的；而后者则是你必须是你要克隆的项目的拥有者或管理员，且需要先添加 SSH key ，否则无法克隆
+  在GitHub上添加SSH key方法
+详见https://www.cnblogs.com/ayseeing/p/3572582.html
+  2.2 新建的github的仓库名必须为 用户名+github.io 小编查看了网上许多文章都有说这个用户名的要求，然而小编用自定义的仓库名也是可以的 ~
+2.3 将文件上传到GitHub前应先pull    git pull &ndash;rebase origin master
+   再上传
+ git push -u origin master
+   上传的内容需master分支中查看  2.4 上传到GitHub后部署网站   在Settings找到Github Pages，如图：
+    图中的地址就是个人博客的地址了
+  3.常见问题 3.1 Updates were rejected because the tip of your current branch is behind   方法一
+    </div>
+  </div>
+</div>
+
+        
+      
+        <h2 class="f1">
+          <a href="./tags/scene" class="link blue hover-black">
+            Tag: scene
+          </a>
+        </h2>
         
           <div class="relative w-100 mb4 bg-white nested-copy-line-height">
   <div class="bg-white mb3 pa4 gray overflow-hidden">
@@ -168,6 +220,35 @@
     <div class="nested-links f5 lh-copy nested-copy-line-height">
       Three hundred and forty-eight years, six months, and nineteen days ago to-day, the Parisians awoke to the sound of all the bells in the triple circuit of the city, the university, and the town ringing a full peal.
 The sixth of January, 1482, is not, however, a day of which history has preserved the memory. There was nothing notable in the event which thus set the bells and the bourgeois of Paris in a ferment from early morning.
+    </div>
+  </div>
+</div>
+
+        
+      
+        <h2 class="f1">
+          <a href="./tags/vscode/github" class="link blue hover-black">
+            Tag: vscode/github
+          </a>
+        </h2>
+        
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Post</span>
+    <h1 class="f3 near-black">
+      <a href="./post/%E5%A6%82%E4%BD%95%E5%B0%86vscode%E4%BB%A3%E7%A0%81%E5%BF%AB%E9%80%9F%E5%90%8C%E6%AD%A5%E5%88%B0githubgitee%E4%B8%8A.html" class="link black dim">
+        如何将vscode代码快速同步到github/gitee上
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      用git实现源代码管理几乎是程序员的必备操作，下面是简单实现流程：
+ 在vscode打开代码所在文件夹 在左侧栏点击源代码管理 初始化存储库 添加远程存储库 输入远程仓库地址（没有仓库的要先建个仓） 输入仓库名  到这步，本地仓库就跟远程仓库连上了。
+接下来，就是如何上传到远程仓库。
+  点击左侧源代码管理
+  点击“+”号
+  点击上面的“√”号
+  点击“&hellip;”  先点击拉取后点击推送现在就完成push了。快去GitHub/Gitee上看看文件是否上传成功了吧。
+  
     </div>
   </div>
 </div>

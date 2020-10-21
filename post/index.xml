@@ -8,49 +8,60 @@
     <language>en-us</language>
     <lastBuildDate>Thu, 02 Mar 2017 12:00:00 -0500</lastBuildDate><atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Chapter VI: Esmeralda</title>
-      <link>/post/chapter-6.html</link>
-      <pubDate>Fri, 14 Apr 2017 11:25:05 -0400</pubDate>
+      <title>Hugo&#43;gitee 构建个人博客</title>
+      <link>/post/%E7%94%A8hugo%E5%9C%A8gitee%E4%B8%8A%E6%9E%84%E5%BB%BA%E5%8D%9A%E5%AE%A2windows%E7%8E%AF%E5%A2%83%E4%B8%8B.html</link>
+      <pubDate>Wed, 21 Oct 2020 13:40:08 +0000</pubDate>
       
-      <guid>/post/chapter-6.html</guid>
-      <description>We are delighted to be able to inform the reader, that during the whole of this scene, Gringoire and his piece had stood firm. His actors, spurred on by him, had not ceased to spout his comedy, and he had not ceased to listen to it. He had made up his mind about the tumult, and was determined to proceed to the end, not giving up the hope of a return of attention on the part of the public.</description>
+      <guid>/post/%E7%94%A8hugo%E5%9C%A8gitee%E4%B8%8A%E6%9E%84%E5%BB%BA%E5%8D%9A%E5%AE%A2windows%E7%8E%AF%E5%A2%83%E4%B8%8B.html</guid>
+      <description>用Hugo在gitee上构建博客（Windows环境下） 大家好！这是我第一次在gitee上搭建博客，也是我第一次写博客。作为一个博客小白，我在搭建博客的过程中走了很多弯路，但也收获了丰富的经验。现在我把自己搭建博客的过程分享给大家，希望能帮助到有需要的人。当然其中还有很多不足之处，欢迎各位大佬指教！
+1.为什么要用gitee？ 相信很多朋友都觉得用GitHub搭建博客会更好，那为什么还要使用gitee呢，下面我总结了几点使用gitee的优点：
+ 更流畅的访问 由于某些众所周知的原因，GitHub有些时候可能无法访问或访问缓慢，gitee由于服务器在国内，访问速度还是很不错的；（呀！在小编写这篇博客的当天有很多朋友表示无法访问GitHub~） 私有仓库 相比于GitHub，gitee提供了私有仓库的功能，给代码在网上的托管提供了更多的选择。 (更新：GitHub现在好像也支持私有仓库了)  2.安装git  安装地址：https://git-scm.com/download/win 安装时一路next就完事了 成功后右键可以看到 git bash  3.安装Hugo   安装地址https://github.com/gohugoio/hugo/releases   创建一个Hugo文件夹，打开并创建子文件夹bin,sites(以后在本地写博客的位置)，将压缩包解压到bin文件夹中
+  将hugo添加到系统路径
+ 打开系统高级设置-&amp;gt;环境变量，点击 用户变量中的Path，点击编辑，点击右上角新建，将上面的bin文件夹的地址复制粘贴，回车键，点击确定    验证是否安装成功 git bash中输入
+ hugo version
+   4.创建远程仓库   注册gitee账号
+  点击右上角“+”号新建仓库
+  自定义仓库名（无需跟用户名相同）
+  是否开源：公开
+  创建
+现在你有了自己的仓库，记得记下仓库地址，后边要用到哦~
+  5.搭建博客 （以下所有命令都在git bash中输入）   新建博客
+在sites文件夹中</description>
     </item>
     
     <item>
-      <title>Chapter V: Quasimodo</title>
-      <link>/post/chapter-5.html</link>
-      <pubDate>Thu, 13 Apr 2017 11:15:58 -0400</pubDate>
+      <title>如何将vscode代码快速同步到github/gitee上</title>
+      <link>/post/%E5%A6%82%E4%BD%95%E5%B0%86vscode%E4%BB%A3%E7%A0%81%E5%BF%AB%E9%80%9F%E5%90%8C%E6%AD%A5%E5%88%B0githubgitee%E4%B8%8A.html</link>
+      <pubDate>Wed, 21 Oct 2020 13:22:08 +0000</pubDate>
       
-      <guid>/post/chapter-5.html</guid>
-      <description>In the twinkling of an eye, all was ready to execute Coppenole’s idea. Bourgeois, scholars and law clerks all set to work. The little chapel situated opposite the marble table was selected for the scene of the grinning match. A pane broken in the pretty rose window above the door, left free a circle of stone through which it was agreed that the competitors should thrust their heads. In order to reach it, it was only necessary to mount upon a couple of hogsheads, which had been produced from I know not where, and perched one upon the other, after a fashion.</description>
+      <guid>/post/%E5%A6%82%E4%BD%95%E5%B0%86vscode%E4%BB%A3%E7%A0%81%E5%BF%AB%E9%80%9F%E5%90%8C%E6%AD%A5%E5%88%B0githubgitee%E4%B8%8A.html</guid>
+      <description>用git实现源代码管理几乎是程序员的必备操作，下面是简单实现流程：
+ 在vscode打开代码所在文件夹 在左侧栏点击源代码管理 初始化存储库 添加远程存储库 输入远程仓库地址（没有仓库的要先建个仓） 输入仓库名  到这步，本地仓库就跟远程仓库连上了。
+接下来，就是如何上传到远程仓库。
+  点击左侧源代码管理
+  点击“+”号
+  点击上面的“√”号
+  点击“&amp;hellip;”  先点击拉取后点击推送现在就完成push了。快去GitHub/Gitee上看看文件是否上传成功了吧。
+  </description>
     </item>
     
     <item>
-      <title>Chapter IV: Master Jacques Coppenole</title>
-      <link>/post/chapter-4.html</link>
-      <pubDate>Wed, 12 Apr 2017 11:14:48 -0400</pubDate>
+      <title>Hugo&#43;github 构建个人博客</title>
+      <link>/post/hugo&#43;github-%E6%9E%84%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2windows%E7%8E%AF%E5%A2%83%E4%B8%8B.html</link>
+      <pubDate>Wed, 21 Oct 2020 13:07:08 +0000</pubDate>
       
-      <guid>/post/chapter-4.html</guid>
-      <description>While the pensioner of Ghent and his eminence were exchanging very low bows and a few words in voices still lower, a man of lofty stature, with a large face and broad shoulders, presented himself, in order to enter abreast with Guillaume Rym; one would have pronounced him a bull-dog by the side of a fox. His felt doublet and leather jerkin made a spot on the velvet and silk which surrounded him.</description>
-    </item>
-    
-    <item>
-      <title>Chapter III: Monsieur the Cardinal</title>
-      <link>/post/chapter-3.html</link>
-      <pubDate>Tue, 11 Apr 2017 11:13:32 -0400</pubDate>
-      
-      <guid>/post/chapter-3.html</guid>
-      <description>Poor Gringoire! the din of all the great double petards of the Saint-Jean, the discharge of twenty arquebuses on supports, the detonation of that famous serpentine of the Tower of Billy, which, during the siege of Paris, on Sunday, the twenty-sixth of September, 1465, killed seven Burgundians at one blow, the explosion of all the powder stored at the gate of the Temple, would have rent his ears less rudely at that solemn and dramatic moment, than these few words, which fell from the lips of the usher, “His eminence, Monseigneur the Cardinal de Bourbon.</description>
-    </item>
-    
-    <item>
-      <title>Chapter II: Pierre Gringoire</title>
-      <link>/post/chapter-2.html</link>
-      <pubDate>Mon, 10 Apr 2017 11:00:59 -0400</pubDate>
-      
-      <guid>/post/chapter-2.html</guid>
-      <description>Nevertheless, as be harangued them, the satisfaction and admiration unanimously excited by his costume were dissipated by his words; and when he reached that untoward conclusion: “As soon as his illustrious eminence, the cardinal, arrives, we will begin,” his voice was drowned in a thunder of hooting.
-“Begin instantly! The mystery! the mystery immediately!” shrieked the people. And above all the voices, that of Johannes de Molendino was audible, piercing the uproar like the fife’s derisive serenade: “Commence instantly!</description>
+      <guid>/post/hugo&#43;github-%E6%9E%84%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2windows%E7%8E%AF%E5%A2%83%E4%B8%8B.html</guid>
+      <description>Hugo+Github 搭建个人博客（Windows环境下） 1.前言 由于在GitHub上部署博客跟在gitee上的流程基本一致，所以本文只给出了在GitHub上部署的差别以及可能出现的问题的处理。具体流程参考：用Hugo在gitee上构建博客（Windows环境下）
+2.Differences 2.1 https vs SSH   区别：前者可以随意克隆github上的项目，不管是谁的；而后者则是你必须是你要克隆的项目的拥有者或管理员，且需要先添加 SSH key ，否则无法克隆
+  在GitHub上添加SSH key方法
+详见https://www.cnblogs.com/ayseeing/p/3572582.html
+  2.2 新建的github的仓库名必须为 用户名+github.io 小编查看了网上许多文章都有说这个用户名的要求，然而小编用自定义的仓库名也是可以的 ~
+2.3 将文件上传到GitHub前应先pull    git pull &amp;ndash;rebase origin master
+   再上传
+ git push -u origin master
+   上传的内容需master分支中查看  2.4 上传到GitHub后部署网站   在Settings找到Github Pages，如图：
+    图中的地址就是个人博客的地址了
+  3.常见问题 3.1 Updates were rejected because the tip of your current branch is behind   方法一</description>
     </item>
     
     <item>
@@ -61,36 +72,6 @@
       <guid>/post/chapter-1.html</guid>
       <description>Three hundred and forty-eight years, six months, and nineteen days ago to-day, the Parisians awoke to the sound of all the bells in the triple circuit of the city, the university, and the town ringing a full peal.
 The sixth of January, 1482, is not, however, a day of which history has preserved the memory. There was nothing notable in the event which thus set the bells and the bourgeois of Paris in a ferment from early morning.</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>/post/hugo&#43;github-%E6%9E%84%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2windows%E7%8E%AF%E5%A2%83%E4%B8%8B.html</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/post/hugo&#43;github-%E6%9E%84%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2windows%E7%8E%AF%E5%A2%83%E4%B8%8B.html</guid>
-      <description>Hugo+github 构建个人博客（Windows环境下） 前言 由于在GitHub上部署博客跟在gitee上的流程基本一致，所以本文只给出了在GitHub上部署的差别以及可能出现的问题的处理。具体流程参考：用Hugo在gitee上构建博客（Windows环境下）
-Differences   https vs SSH
-  区别：前者可以随意克隆github上的项目，而不管是谁的；而后者则是你必须是你要克隆的项目的拥有者或管理员，且需要先添加 SSH key ，否则无法克隆
-  在GitHub上添加SSH key方法
-详见https://www.cnblogs.com/ayseeing/p/3572582.html
-    新建的github的仓库名必须为 用户名+github.io
-  将文件上传到GitHub前应先pull
-   git pull &amp;ndash;rebase origin master
-   再上传
- git push -u origin master
-     上传的内容需master分支中可查看
-  上传到GitHub后部署网站  在Settings找到Github Pages，如图： xxxxxxxxx 图中的地址就是个人博客的地址了  常见问题 Updates were rejected because the tip of your current branch is behind   方法一</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>/post/vscode&#43;git&#43;githubgitee%E6%BA%90%E4%BB%A3%E7%A0%81%E7%AE%A1%E7%90%86.html</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/post/vscode&#43;git&#43;githubgitee%E6%BA%90%E4%BB%A3%E7%A0%81%E7%AE%A1%E7%90%86.html</guid>
-      <description>用git实现源代码管理几乎是程序员的必备操作，下面是简单实现流程：
- 在vscode左侧栏点击源代码管理   </description>
     </item>
     
   </channel>
