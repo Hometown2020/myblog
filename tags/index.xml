@@ -6,7 +6,16 @@
     <description>Recent content in Tags on My blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 21 Oct 2020 20:26:08 +0000</lastBuildDate><atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 24 Oct 2020 20:28:08 +0000</lastBuildDate><atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>git</title>
+      <link>/tags/git.html</link>
+      <pubDate>Sat, 24 Oct 2020 20:28:08 +0000</pubDate>
+      
+      <guid>/tags/git.html</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>vscode配置</title>
       <link>/tags/vscode%E9%85%8D%E7%BD%AE.html</link>
