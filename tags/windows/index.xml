@@ -9,13 +9,11 @@
     <lastBuildDate>Wed, 21 Oct 2020 20:25:08 +0000</lastBuildDate><atom:link href="/tags/windows/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>一个鲜为人知但很实用的Windows实用技巧</title>
-      <link>/post/%E4%B8%80%E4%B8%AA%E9%B2%9C%E4%B8%BA%E4%BA%BA%E7%9F%A5%E4%BD%86%E5%BE%88%E5%AE%9E%E7%94%A8%E7%9A%84windows%E5%AE%9E%E7%94%A8%E6%8A%80%E5%B7%A7.html</link>
+      <link>/2020/10/%E4%B8%80%E4%B8%AA%E9%B2%9C%E4%B8%BA%E4%BA%BA%E7%9F%A5%E4%BD%86%E5%BE%88%E5%AE%9E%E7%94%A8%E7%9A%84windows%E5%AE%9E%E7%94%A8%E6%8A%80%E5%B7%A7.html</link>
       <pubDate>Wed, 21 Oct 2020 20:25:08 +0000</pubDate>
       
-      <guid>/post/%E4%B8%80%E4%B8%AA%E9%B2%9C%E4%B8%BA%E4%BA%BA%E7%9F%A5%E4%BD%86%E5%BE%88%E5%AE%9E%E7%94%A8%E7%9A%84windows%E5%AE%9E%E7%94%A8%E6%8A%80%E5%B7%A7.html</guid>
-      <description>作为一个电脑党，最无法忍受的就是每次开机都要手动打开那些必要的程序。有没办法让这些程序自动打开呢？今天小编意外地得到了一个方法，现在分享给大家。 (以腾讯桌面整理为例)
- 1，Win + R 2，输入taskschd.msc，回车，打开了任务计划程序 3，在右侧栏框中选择创建基本任务 4，名称：桌面整理 描述：开机自动打开腾讯桌面整理 5，触发器选择：当前用户登录时 6，点击下一步 7，操作选择：启动程序。点击下一步 8，先找到所要启动的程序的.exe文件（注意不是快捷方式），复制地址，在程序或脚本框中粘贴进来；点击下一步 9，确定设置正确后点击完成  现在任务设置成功了。重启试一下，发现果然自动启动桌面整理了。
-大家可以把一些开机必启的程序加进来，体验效果很赞~ 当然，除了开机启动外，还可以自定义许多好玩的任务操作，具体就由你自由发挥啦~</description>
+      <guid>/2020/10/%E4%B8%80%E4%B8%AA%E9%B2%9C%E4%B8%BA%E4%BA%BA%E7%9F%A5%E4%BD%86%E5%BE%88%E5%AE%9E%E7%94%A8%E7%9A%84windows%E5%AE%9E%E7%94%A8%E6%8A%80%E5%B7%A7.html</guid>
+      <description>&lt;p&gt;作为一个电脑党，最无法忍受的就是每次开机都要手动打开那些必要的程序。有没办法让这些程序自动打开呢？今天小编意外地得到了一个方法，现在分享给大家。&lt;/p&gt;</description>
     </item>
     
   </channel>

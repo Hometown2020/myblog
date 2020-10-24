@@ -9,18 +9,12 @@
     <lastBuildDate>Wed, 21 Oct 2020 20:26:08 +0000</lastBuildDate><atom:link href="/tags/vscode%E9%85%8D%E7%BD%AE/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>如何快速在vscode配置C/C&#43;&#43;环境</title>
-      <link>/post/%E5%A6%82%E4%BD%95%E5%BF%AB%E9%80%9F%E5%9C%A8vscode%E9%85%8D%E7%BD%AEcc&#43;&#43;%E7%8E%AF%E5%A2%83.html</link>
+      <link>/2020/10/%E5%A6%82%E4%BD%95%E5%BF%AB%E9%80%9F%E5%9C%A8vscode%E9%85%8D%E7%BD%AEc/c-%E7%8E%AF%E5%A2%83.html</link>
       <pubDate>Wed, 21 Oct 2020 20:26:08 +0000</pubDate>
       
-      <guid>/post/%E5%A6%82%E4%BD%95%E5%BF%AB%E9%80%9F%E5%9C%A8vscode%E9%85%8D%E7%BD%AEcc&#43;&#43;%E7%8E%AF%E5%A2%83.html</guid>
-      <description>相信许多刚开始使用vscode的小伙伴们都有过这样的感受，明明按着网上的教程一步一步来，最终却总会出现一些奇奇怪怪的问题；配了几个小时之后还是失败。。 小编也是这么一路走过来的，现在给大家分享一下小编的成功秘籍~
-1.卸载重装vscode 如果你确定你的电脑上从没装过vscode，那么直接跳到下一步；如果你电脑上还装着或者曾装过，那么请按接下来的操作，否则可能最后配置失败哦~
-  卸载vscode
-  删除残留数据
- C:\Users\Administrator\.vscode,C:\Users\Administrator\AppData\Roaming\Code 这两个位置的数据全部删除掉 Administrator:这个文件夹在不同的电脑上的名称可能不同    重启电脑
-  2.下载vscode  官网链接：https://code.visualstudio.com/ 安装时一直下一步就好了  3.下载MinGW  下载链接：https://sourceforge.net/projects/mingw-w64/files/ 找到最新版的 &amp;ldquo;x86_64-posix-seh&amp;quot;下载 如图 解压缩到任意位置  4.配置环境变量   打开解压缩文件夹的bin文件夹，复制路径，如图
-  注意：如果出现此文件夹为空，可能是因为电脑的杀毒软件误删除了里面的文件，这是需要暂时关闭电脑的杀毒软件再进行解压缩    打开系统高级设置-&amp;gt;环境变量-&amp;gt;Path-&amp;gt;编辑-&amp;gt;新建，将刚才复制的路径粘贴进来，然后一路确定即可。   验证配置是否成功 win+R，输入cmd，回车，输入g++ -v，如果结果如下图，说明配置成功如果结果为：&amp;lsquo;g++&amp;lsquo;不是内部或外部命令，也不是可运行的程序或批处理文件。则失败。
-  5.配置c/c++环境  重启vscode 配置中文（不需要的同学跳过该步）  点击左边的扩展，输入Chinese，选择图中的插件，安装后重启vscode即可   新建文件夹  新建文件（如：helloworld.cpp）  打一段简单的hello world代码    按下Ctrl+ F5 （或Ctrl+ Fn +F5），点击C++(GDB/LLDB) 点击 会自动生成launch.</description>
+      <guid>/2020/10/%E5%A6%82%E4%BD%95%E5%BF%AB%E9%80%9F%E5%9C%A8vscode%E9%85%8D%E7%BD%AEc/c-%E7%8E%AF%E5%A2%83.html</guid>
+      <description>&lt;p&gt;相信许多刚开始使用vscode的小伙伴们都有过这样的感受，明明按着网上的教程一步一步来，最终却总会出现一些奇奇怪怪的问题；配了几个小时之后还是失败。。
+小编也是这么一路走过来的，现在给大家分享一下小编的成功秘籍~&lt;/p&gt;</description>
     </item>
     
   </channel>

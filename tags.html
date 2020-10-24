@@ -68,6 +68,12 @@
         <ul class="pl0 mr3">
           
           <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="./" title="首页 page">
+              首页
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
             <a class="hover-white no-underline white-90" href="./about.html" title="About page">
               About
             </a>
@@ -146,31 +152,13 @@
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Post</span>
     <h1 class="f3 near-black">
-      <a href="./post/%E5%A6%82%E4%BD%95%E5%9C%A8construct3%E4%B8%8A%E5%BC%80%E5%8F%91%E6%B8%B8%E6%88%8F%E6%B8%B8%E6%88%8F%E5%B1%95%E7%A4%BA.html" class="link black dim">
+      <a href="./2020/10/%E5%A6%82%E4%BD%95%E5%9C%A8construct3%E4%B8%8A%E5%BC%80%E5%8F%91%E6%B8%B8%E6%88%8F%E6%B8%B8%E6%88%8F%E5%B1%95%E7%A4%BA.html" class="link black dim">
         如何在construct3上开发游戏&amp;游戏展示
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      前言 为了更快体验做出游戏的快乐，我们可以直接采用construct3 提供的游戏模板。这里我用的是基础模板中的塔防游戏。我们在这个的基础上加进来“植物大战僵尸”的一些元素，包括内容和玩法。
-step1.背景图设置 为了更贴近游戏主题，我们首先修改背景图，将原背景换成“植物们”的草坪。如图
-双击Wall，导入背景图关掉背景编辑器，背景修改完成 step2.添加新元素 双击空白处，选择出现界面中的Sprite创建元素
-此时页面不会有什么变化，再次左键单击空白处，出现动画编辑器，此时将要添加的元素图像导进，关闭编辑器。关闭后，在右上角的项目中找到刚创建的元素，左键单击，在左边的属性中修改有关属性，如，修改元素名称、大小等，注意，此处的修改将应用于所有实例对象，而在场景中的修改只应用于单个实例对象。
-这里由于“豌豆射手”的功能是炮台，所以还需给它添加行为，在右上角项目中找到“豌豆射手”，右键编辑行为，添加新行为，选择炮台，成功添加后，如图此时再回到左侧属性处修改炮台的属性值，如图“寒冰射手”，僵尸，子弹的创建流程相同，此处便不再多说。注意，僵尸的行为时“寻路”“闪烁”；子弹的添加的行为是“子弹”；另外新建元素时生成的实例对象不可以删掉，否则无法再对该对象进行实例化，通常可以通过复制粘贴进行实例化。
-此处我还添加了其他4个对象plant1，plant2用于后面点击购买植物操作，“begin”：开始游戏，“pause”：暂停出怪
-好了，现在基本元素添加完毕，可以进入最激动人心的环节了-游戏设计。
-step3.游戏设计 先说下设计的蓝图。 僵尸：出现速度和生命值都随时间的增加而增加，当僵尸到达终点，会随机销毁一个豌豆射手和一个寒冰射手； 豌豆射手：攻击僵尸，减少其生命值直至销毁僵尸； 寒冰射手：更强大的攻击能力，更快的攻击速度，更广的攻击范围，同时带有减速效果；寒冰射手可直接购买也可以由豌豆射手升级得到
-此处角色的设计跟植物大战僵尸中的有些不同，不过，这也正是设计游戏的快乐，不是吗~
-蓝图绘制好了，就可以开始实现了；此时不得不说construct3对入门者的友好了，不用学习新的语言，也不用辛苦的打代码。
-首先先新建分组，一个好的分组可以让游戏逻辑更加清晰；这里将僵尸和两种植物的实现分开。首先是对游戏的控制： 设置全局变量Begin,当游戏开始是置为True，暂停时置为false；具体实现：添加事件到“Enemy control”-&gt;Touch-&gt;轻按对象-&gt;目标选择对象“Begin”-&gt;完成，添加动作-&gt;系统-&gt;设置布尔值-&gt;变量：Begin，值：True-&gt;完成。 这样就创建好一个事件了。Pause事件创建同上。
-僵尸的实现： 游戏开始后每过一段时间都会生成新的僵尸，所以事件的条件是时隔和游戏开始；出怪，也就是在图层上生成僵尸的实例对象，之后实例对象要到达终点，就要寻路，还要有寻路的初始速度、加速度和最大速度。设置好了之后就要让僵尸沿路线移动。具体实现如图为了降低游戏难度，这里设置了每隔EnemySpawnTime秒金币加1。
-添加多个条件的方法：右键已有条件-&gt;添加其他条件 添加动作的流程：添加动作-&gt;选择动作的对象-&gt;修改对象动作-&gt;修改参数 注意“系统”对象的使用； 注意坐标值最好不要用具体的数值，否则修改起来麻烦且容易出错。
-僵尸生命值，出现速度随时间变快 实现：每过一段时间增加health,减少EnemySpawnTime僵尸受到攻击 实现：受到攻击时生命值减少（可能还会减少速度），当生命值&lt;=0时僵尸对象销毁，销毁时生成BulletlmpactParticles对象作为特效，同时增加金钱数量和游戏分数僵尸到达终点，自己消失，随机销毁一个豌豆射手和一个寒冰射手 实现：销毁僵尸实例对象，同时随机销毁一个豌豆射手实例对象和一个寒冰射手实例对象豌豆射手的实现
-被添加到场景中时，锁定目标，发射子弹；如果攻击范围内没有目标则销毁子弹添加豌豆射手到场景 首先确定金额是否足够；购买的直接结果是对应的布尔值plant1置为true,此时应该设置plant2为false，这样将以最后一次购买为准，防止同时买了两种射手；购买成功后在场景中点击才生成实例对象，此时plant1应重新设为false，同时金钱减少； 如果新买的所放位置本来就有，视为购买失败，此时应该返回金额，并销毁对象；由于销毁对象时无法区别原有的和新的，所以两个都会被销毁，此时应该再创建新的对象。
-寒冰射手的实现
-寒冰射手的实现跟豌豆射手几乎一致，所以直接附上实现关于得分，金钱数以及购买界面 购买界面的图片即plant1,plant2：添加元素后的实例对象直接放在目标位置就可以了
-文字：空白处双击左键，选择Text，再次单击左键，双击生成的文本框，修改文本内容；这样，无需改变的文本就设置好了； 对于时时改变的文本：回到事件编辑界面，添加事件，让系统在每一帧都更改文本内容 现在，一个新的小游戏就完成了。
-看完整个流程，是不是觉得原来开发小游戏其实也不难，那就快上机试试吧~
-这里小编附上这个游戏的链接，大家亲自可以感受一下效果~ 植物大战僵尸塔防版
+      <h1 id="前言">前言</h1>
+<p>为了更快体验做出游戏的快乐，我们可以直接采用construct3 提供的游戏模板。这里我用的是基础模板中的塔防游戏。我们在这个的基础上加进来“植物大战僵尸”的一些元素，包括内容和玩法。</p>
     </div>
   </div>
 </div>
@@ -187,20 +175,13 @@ step3.游戏设计 先说下设计的蓝图。 僵尸：出现速度和生命值
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Post</span>
     <h1 class="f3 near-black">
-      <a href="./post/dosbox%E7%9A%84%E5%AE%89%E8%A3%85%E5%92%8C%E4%BD%BF%E7%94%A8.html" class="link black dim">
+      <a href="./2020/10/dosbox%E7%9A%84%E5%AE%89%E8%A3%85%E5%92%8C%E4%BD%BF%E7%94%A8.html" class="link black dim">
         DOSBox的安装和使用
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      （1）DOSBox的下载安装 DOSBox从安装到使用的过程还是有些繁琐的，所以小编直接附上免安装版本，大家下载解压后点击DOSBox.exe文件就可以直接使用啦~ 下载链接： https://download.csdn.net/download/qq_45975757/12912164
-注意
- 建议解压到D盘或E盘的根目录，方便使用 双击DOSBox.exe后会生成两个窗口，在小窗口上编译运行，但是大的窗口也不可以关掉，可以最小化  （2）DOSBox的使用  创建虚拟C盘  mount c E:\DOSBox\asm //一定是asm文件夹的地址
-  进入虚拟C盘  c:
-  编辑&quot;.asm&quot;文件(也可以先用其他软件先写好.asm文件放到asm文件夹中)  edit xxx.asm
-  编译  masm xxx.asm
-  一直回车直到生成.obj文件 连接  link xxx.obj
-  一直回车到生成.exe文件 运行  xxx.exe
-   （3）Tips  为简单起见，编译连接运行时都可以忽略后缀名 DOSBox好像不区分大小写，所以直接用小写速度更快哦~  
+      <h1 id="1dosbox的下载安装">（1）DOSBox的下载安装</h1>
+<p>DOSBox从安装到使用的过程还是有些繁琐的，所以小编直接附上免安装版本，大家下载解压后点击DOSBox.exe文件就可以直接使用啦~</p>
     </div>
   </div>
 </div>
@@ -217,25 +198,13 @@ step3.游戏设计 先说下设计的蓝图。 僵尸：出现速度和生命值
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Post</span>
     <h1 class="f3 near-black">
-      <a href="./post/%E7%94%A8hugo%E5%9C%A8gitee%E4%B8%8A%E6%9E%84%E5%BB%BA%E5%8D%9A%E5%AE%A2windows%E7%8E%AF%E5%A2%83%E4%B8%8B.html" class="link black dim">
+      <a href="./2020/10/hugo-gitee-%E6%9E%84%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2.html" class="link black dim">
         Hugo&#43;gitee 构建个人博客
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      用Hugo在gitee上构建博客（Windows环境下） 大家好！这是我第一次在gitee上搭建博客，也是我第一次写博客。作为一个博客小白，我在搭建博客的过程中走了很多弯路，但也收获了丰富的经验。现在我把自己搭建博客的过程分享给大家，希望能帮助到有需要的人。当然其中还有很多不足之处，欢迎各位大佬指教！
-1.为什么要用gitee？ 相信很多朋友都觉得用GitHub搭建博客会更好，那为什么还要使用gitee呢，下面我总结了几点使用gitee的优点：
- 更流畅的访问 由于某些众所周知的原因，GitHub有些时候可能无法访问或访问缓慢，gitee由于服务器在国内，访问速度还是很不错的；（呀！在小编写这篇博客的当天有很多朋友表示无法访问GitHub~） 私有仓库 相比于GitHub，gitee提供了私有仓库的功能，给代码在网上的托管提供了更多的选择。 (更新：GitHub现在好像也支持私有仓库了)  2.安装git  安装地址：https://git-scm.com/download/win 安装时一路next就完事了 成功后右键可以看到 git bash  3.安装Hugo   安装地址https://github.com/gohugoio/hugo/releases   创建一个Hugo文件夹，打开并创建子文件夹bin,sites(以后在本地写博客的位置)，将压缩包解压到bin文件夹中
-  将hugo添加到系统路径
- 打开系统高级设置-&gt;环境变量，点击 用户变量中的Path，点击编辑，点击右上角新建，将上面的bin文件夹的地址复制粘贴，回车键，点击确定    验证是否安装成功 git bash中输入
- hugo version
-   4.创建远程仓库   注册gitee账号
-  点击右上角“+”号新建仓库
-  自定义仓库名（无需跟用户名相同）
-  是否开源：公开
-  创建
-现在你有了自己的仓库，记得记下仓库地址，后边要用到哦~
-  5.搭建博客 （以下所有命令都在git bash中输入）   新建博客
-在sites文件夹中
+      <h1 id="用hugo在gitee上构建博客windows环境下">用Hugo在gitee上构建博客（Windows环境下）</h1>
+<p>大家好！这是我第一次在gitee上搭建博客，也是我第一次写博客。作为一个博客小白，我在搭建博客的过程中走了很多弯路，但也收获了丰富的经验。现在我把自己搭建博客的过程分享给大家，希望能帮助到有需要的人。当然其中还有很多不足之处，欢迎各位大佬指教！</p>
     </div>
   </div>
 </div>
@@ -252,22 +221,13 @@ step3.游戏设计 先说下设计的蓝图。 僵尸：出现速度和生命值
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Post</span>
     <h1 class="f3 near-black">
-      <a href="./post/hugo&#43;github-%E6%9E%84%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2windows%E7%8E%AF%E5%A2%83%E4%B8%8B.html" class="link black dim">
+      <a href="./2020/10/hugo-github-%E6%9E%84%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2.html" class="link black dim">
         Hugo&#43;github 构建个人博客
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      Hugo+Github 搭建个人博客（Windows环境下） 1.前言 由于在GitHub上部署博客跟在gitee上的流程基本一致，所以本文只给出了在GitHub上部署的差别以及可能出现的问题的处理。具体流程参考：用Hugo在gitee上构建博客（Windows环境下）
-2.Differences 2.1 https vs SSH   区别：前者可以随意克隆github上的项目，不管是谁的；而后者则是你必须是你要克隆的项目的拥有者或管理员，且需要先添加 SSH key ，否则无法克隆
-  在GitHub上添加SSH key方法
-详见https://www.cnblogs.com/ayseeing/p/3572582.html
-  2.2 新建的github的仓库名必须为 用户名+github.io 小编查看了网上许多文章都有说这个用户名的要求，然而小编用自定义的仓库名也是可以的 ~
-2.3 将文件上传到GitHub前应先pull    git pull &ndash;rebase origin master
-   再上传
- git push -u origin master
-   上传的内容需master分支中查看  2.4 上传到GitHub后部署网站   在Settings找到Github Pages，如图：
-    图中的地址就是个人博客的地址了
-  3.常见问题 3.1 Updates were rejected because the tip of your current branch is behind   方法一
+      <h2 id="1前言">1.前言</h2>
+<p>由于在GitHub上部署博客跟在gitee上的流程基本一致，所以本文只给出了在GitHub上部署的差别以及可能出现的问题的处理。</p>
     </div>
   </div>
 </div>
@@ -284,17 +244,12 @@ step3.游戏设计 先说下设计的蓝图。 僵尸：出现速度和生命值
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Post</span>
     <h1 class="f3 near-black">
-      <a href="./post/vscode%E5%85%B3%E4%BA%8Elaunch.json%E4%BD%BF%E7%94%A8%E7%9A%84%E5%B0%8F%E6%8A%80%E5%B7%A7.html" class="link black dim">
+      <a href="./2020/10/vscode%E5%85%B3%E4%BA%8Elaunch.json%E4%BD%BF%E7%94%A8%E7%9A%84%E5%B0%8F%E6%8A%80%E5%B7%A7.html" class="link black dim">
         vscode关于launch.json使用的小技巧
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      常用vscode的朋友经常会遇到这样的问题，如果当前目录没有配置文件（launch.json,tasks.json,setting.json等）,就不能编译运行代码。那有没有办法解决这个问题呢？答案是肯定的。
-首先打开任意一个含有.vscode配置文件夹的文件夹，然后在vscode中打开需要编译的任意位置的文件（注意不是文件夹），然后就可以编译运行了。是不是很简单啊~
-那如果一定得打开文件夹（比如一个项目），那怎么办呢？
-方法一：将原有的配置文件copy过来。这方法简单粗暴，缺点同样很明显：每新建一个项目都得copy一次，太烦了。
-方法二：使用全局配置。这方法稍微麻烦些，但是可以一劳永逸。具体操作流程请见：https://blog.csdn.net/qq_45975757/article/details/109037302
-觉得好用的话就顺手给个赞吧，你的鼓励是作者创作的动力~
+      <p>常用vscode的朋友经常会遇到这样的问题，如果当前目录没有配置文件（launch.json,tasks.json,setting.json等）,就不能编译运行代码。那有没有办法解决这个问题呢？答案是肯定的。</p>
     </div>
   </div>
 </div>
@@ -311,19 +266,12 @@ step3.游戏设计 先说下设计的蓝图。 僵尸：出现速度和生命值
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Post</span>
     <h1 class="f3 near-black">
-      <a href="./post/%E5%A6%82%E4%BD%95%E5%B0%86vscode%E4%BB%A3%E7%A0%81%E5%BF%AB%E9%80%9F%E5%90%8C%E6%AD%A5%E5%88%B0githubgitee%E4%B8%8A.html" class="link black dim">
+      <a href="./2020/10/%E5%A6%82%E4%BD%95%E5%B0%86vscode%E4%BB%A3%E7%A0%81%E5%BF%AB%E9%80%9F%E5%90%8C%E6%AD%A5%E5%88%B0github/gitee%E4%B8%8A.html" class="link black dim">
         如何将vscode代码快速同步到github/gitee上
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      用git实现源代码管理几乎是程序员的必备操作，下面是简单实现流程：
- 在vscode打开代码所在文件夹 在左侧栏点击源代码管理 初始化存储库 添加远程存储库 输入远程仓库地址（没有仓库的要先建个仓） 输入仓库名  到这步，本地仓库就跟远程仓库连上了。
-接下来，就是如何上传到远程仓库。
-  点击左侧源代码管理
-  点击“+”号
-  点击上面的“√”号
-  点击“&hellip;”  先点击拉取后点击推送现在就完成push了。快去GitHub/Gitee上看看文件是否上传成功了吧。
-  
+      <p>用git实现源代码管理几乎是程序员的必备操作，下面是简单实现流程：</p>
     </div>
   </div>
 </div>
@@ -340,19 +288,13 @@ step3.游戏设计 先说下设计的蓝图。 僵尸：出现速度和生命值
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Post</span>
     <h1 class="f3 near-black">
-      <a href="./post/%E5%A6%82%E4%BD%95%E5%BF%AB%E9%80%9F%E5%9C%A8vscode%E9%85%8D%E7%BD%AEcc&#43;&#43;%E7%8E%AF%E5%A2%83.html" class="link black dim">
+      <a href="./2020/10/%E5%A6%82%E4%BD%95%E5%BF%AB%E9%80%9F%E5%9C%A8vscode%E9%85%8D%E7%BD%AEc/c-%E7%8E%AF%E5%A2%83.html" class="link black dim">
         如何快速在vscode配置C/C&#43;&#43;环境
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      相信许多刚开始使用vscode的小伙伴们都有过这样的感受，明明按着网上的教程一步一步来，最终却总会出现一些奇奇怪怪的问题；配了几个小时之后还是失败。。 小编也是这么一路走过来的，现在给大家分享一下小编的成功秘籍~
-1.卸载重装vscode 如果你确定你的电脑上从没装过vscode，那么直接跳到下一步；如果你电脑上还装着或者曾装过，那么请按接下来的操作，否则可能最后配置失败哦~
-  卸载vscode
-  删除残留数据
- C:\Users\Administrator\.vscode,C:\Users\Administrator\AppData\Roaming\Code 这两个位置的数据全部删除掉 Administrator:这个文件夹在不同的电脑上的名称可能不同    重启电脑
-  2.下载vscode  官网链接：https://code.visualstudio.com/ 安装时一直下一步就好了  3.下载MinGW  下载链接：https://sourceforge.net/projects/mingw-w64/files/ 找到最新版的 &ldquo;x86_64-posix-seh&quot;下载 如图 解压缩到任意位置  4.配置环境变量   打开解压缩文件夹的bin文件夹，复制路径，如图
-  注意：如果出现此文件夹为空，可能是因为电脑的杀毒软件误删除了里面的文件，这是需要暂时关闭电脑的杀毒软件再进行解压缩    打开系统高级设置-&gt;环境变量-&gt;Path-&gt;编辑-&gt;新建，将刚才复制的路径粘贴进来，然后一路确定即可。   验证配置是否成功 win+R，输入cmd，回车，输入g++ -v，如果结果如下图，说明配置成功如果结果为：&lsquo;g++&lsquo;不是内部或外部命令，也不是可运行的程序或批处理文件。则失败。
-  5.配置c/c++环境  重启vscode 配置中文（不需要的同学跳过该步）  点击左边的扩展，输入Chinese，选择图中的插件，安装后重启vscode即可   新建文件夹  新建文件（如：helloworld.cpp）  打一段简单的hello world代码    按下Ctrl+ F5 （或Ctrl+ Fn +F5），点击C++(GDB/LLDB) 点击 会自动生成launch.
+      <p>相信许多刚开始使用vscode的小伙伴们都有过这样的感受，明明按着网上的教程一步一步来，最终却总会出现一些奇奇怪怪的问题；配了几个小时之后还是失败。。
+小编也是这么一路走过来的，现在给大家分享一下小编的成功秘籍~</p>
     </div>
   </div>
 </div>
@@ -369,14 +311,12 @@ step3.游戏设计 先说下设计的蓝图。 僵尸：出现速度和生命值
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Post</span>
     <h1 class="f3 near-black">
-      <a href="./post/%E4%B8%80%E4%B8%AA%E9%B2%9C%E4%B8%BA%E4%BA%BA%E7%9F%A5%E4%BD%86%E5%BE%88%E5%AE%9E%E7%94%A8%E7%9A%84windows%E5%AE%9E%E7%94%A8%E6%8A%80%E5%B7%A7.html" class="link black dim">
+      <a href="./2020/10/%E4%B8%80%E4%B8%AA%E9%B2%9C%E4%B8%BA%E4%BA%BA%E7%9F%A5%E4%BD%86%E5%BE%88%E5%AE%9E%E7%94%A8%E7%9A%84windows%E5%AE%9E%E7%94%A8%E6%8A%80%E5%B7%A7.html" class="link black dim">
         一个鲜为人知但很实用的Windows实用技巧
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      作为一个电脑党，最无法忍受的就是每次开机都要手动打开那些必要的程序。有没办法让这些程序自动打开呢？今天小编意外地得到了一个方法，现在分享给大家。 (以腾讯桌面整理为例)
- 1，Win + R 2，输入taskschd.msc，回车，打开了任务计划程序 3，在右侧栏框中选择创建基本任务 4，名称：桌面整理 描述：开机自动打开腾讯桌面整理 5，触发器选择：当前用户登录时 6，点击下一步 7，操作选择：启动程序。点击下一步 8，先找到所要启动的程序的.exe文件（注意不是快捷方式），复制地址，在程序或脚本框中粘贴进来；点击下一步 9，确定设置正确后点击完成  现在任务设置成功了。重启试一下，发现果然自动启动桌面整理了。
-大家可以把一些开机必启的程序加进来，体验效果很赞~ 当然，除了开机启动外，还可以自定义许多好玩的任务操作，具体就由你自由发挥啦~
+      <p>作为一个电脑党，最无法忍受的就是每次开机都要手动打开那些必要的程序。有没办法让这些程序自动打开呢？今天小编意外地得到了一个方法，现在分享给大家。</p>
     </div>
   </div>
 </div>
@@ -393,15 +333,13 @@ step3.游戏设计 先说下设计的蓝图。 僵尸：出现速度和生命值
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Post</span>
     <h1 class="f3 near-black">
-      <a href="./post/%E5%A6%82%E4%BD%95%E5%BF%AB%E9%80%9F%E8%B7%A8%E8%AE%BE%E5%A4%87%E5%88%86%E4%BA%AB%E7%BD%91%E9%A1%B5.html" class="link black dim">
+      <a href="./2020/10/%E5%A6%82%E4%BD%95%E5%BF%AB%E9%80%9F%E8%B7%A8%E8%AE%BE%E5%A4%87%E5%88%86%E4%BA%AB%E7%BD%91%E9%A1%B5.html" class="link black dim">
         如何快速跨设备分享网页
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      很多时候我们会有跨设备浏览网页的需要，这时我们常用的方法是通过登录QQ微信等分享链接再复制到浏览器上，操作实在有些繁琐。 下面分享一下如何利用浏览器自带的二维码生成功能快速实现分享：
-谷歌浏览器：
- 地址栏输入chrome://flags/#sharing-qr-code-generator，回车 快捷键Ctrl+F搜索Enable sharing page via QR Code 将Default改为Enabled 重启浏览器 在要分享的页面空白处右键，可以看到为此页面创建二维码，点击生成二维码，用手机浏览器扫描即可  Microsoft edge:
- 地址栏输入edge://flags/#sharing-qr-code-generator 其他操作同上  
+      <p>很多时候我们会有跨设备浏览网页的需要，这时我们常用的方法是通过登录QQ微信等分享链接再复制到浏览器上，操作实在有些繁琐。
+下面分享一下如何利用浏览器自带的二维码生成功能快速实现分享：</p>
     </div>
   </div>
 </div>

@@ -9,16 +9,11 @@
     <lastBuildDate>Wed, 21 Oct 2020 13:22:08 +0000</lastBuildDate><atom:link href="/tags/vscode-launch.json/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>vscode关于launch.json使用的小技巧</title>
-      <link>/post/vscode%E5%85%B3%E4%BA%8Elaunch.json%E4%BD%BF%E7%94%A8%E7%9A%84%E5%B0%8F%E6%8A%80%E5%B7%A7.html</link>
+      <link>/2020/10/vscode%E5%85%B3%E4%BA%8Elaunch.json%E4%BD%BF%E7%94%A8%E7%9A%84%E5%B0%8F%E6%8A%80%E5%B7%A7.html</link>
       <pubDate>Wed, 21 Oct 2020 13:22:08 +0000</pubDate>
       
-      <guid>/post/vscode%E5%85%B3%E4%BA%8Elaunch.json%E4%BD%BF%E7%94%A8%E7%9A%84%E5%B0%8F%E6%8A%80%E5%B7%A7.html</guid>
-      <description>常用vscode的朋友经常会遇到这样的问题，如果当前目录没有配置文件（launch.json,tasks.json,setting.json等）,就不能编译运行代码。那有没有办法解决这个问题呢？答案是肯定的。
-首先打开任意一个含有.vscode配置文件夹的文件夹，然后在vscode中打开需要编译的任意位置的文件（注意不是文件夹），然后就可以编译运行了。是不是很简单啊~
-那如果一定得打开文件夹（比如一个项目），那怎么办呢？
-方法一：将原有的配置文件copy过来。这方法简单粗暴，缺点同样很明显：每新建一个项目都得copy一次，太烦了。
-方法二：使用全局配置。这方法稍微麻烦些，但是可以一劳永逸。具体操作流程请见：https://blog.csdn.net/qq_45975757/article/details/109037302
-觉得好用的话就顺手给个赞吧，你的鼓励是作者创作的动力~</description>
+      <guid>/2020/10/vscode%E5%85%B3%E4%BA%8Elaunch.json%E4%BD%BF%E7%94%A8%E7%9A%84%E5%B0%8F%E6%8A%80%E5%B7%A7.html</guid>
+      <description>&lt;p&gt;常用vscode的朋友经常会遇到这样的问题，如果当前目录没有配置文件（launch.json,tasks.json,setting.json等）,就不能编译运行代码。那有没有办法解决这个问题呢？答案是肯定的。&lt;/p&gt;</description>
     </item>
     
   </channel>

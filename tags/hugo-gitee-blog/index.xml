@@ -9,24 +9,12 @@
     <lastBuildDate>Wed, 21 Oct 2020 13:40:08 +0000</lastBuildDate><atom:link href="/tags/hugo-gitee-blog/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Hugo&#43;gitee 构建个人博客</title>
-      <link>/post/%E7%94%A8hugo%E5%9C%A8gitee%E4%B8%8A%E6%9E%84%E5%BB%BA%E5%8D%9A%E5%AE%A2windows%E7%8E%AF%E5%A2%83%E4%B8%8B.html</link>
+      <link>/2020/10/hugo-gitee-%E6%9E%84%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2.html</link>
       <pubDate>Wed, 21 Oct 2020 13:40:08 +0000</pubDate>
       
-      <guid>/post/%E7%94%A8hugo%E5%9C%A8gitee%E4%B8%8A%E6%9E%84%E5%BB%BA%E5%8D%9A%E5%AE%A2windows%E7%8E%AF%E5%A2%83%E4%B8%8B.html</guid>
-      <description>用Hugo在gitee上构建博客（Windows环境下） 大家好！这是我第一次在gitee上搭建博客，也是我第一次写博客。作为一个博客小白，我在搭建博客的过程中走了很多弯路，但也收获了丰富的经验。现在我把自己搭建博客的过程分享给大家，希望能帮助到有需要的人。当然其中还有很多不足之处，欢迎各位大佬指教！
-1.为什么要用gitee？ 相信很多朋友都觉得用GitHub搭建博客会更好，那为什么还要使用gitee呢，下面我总结了几点使用gitee的优点：
- 更流畅的访问 由于某些众所周知的原因，GitHub有些时候可能无法访问或访问缓慢，gitee由于服务器在国内，访问速度还是很不错的；（呀！在小编写这篇博客的当天有很多朋友表示无法访问GitHub~） 私有仓库 相比于GitHub，gitee提供了私有仓库的功能，给代码在网上的托管提供了更多的选择。 (更新：GitHub现在好像也支持私有仓库了)  2.安装git  安装地址：https://git-scm.com/download/win 安装时一路next就完事了 成功后右键可以看到 git bash  3.安装Hugo   安装地址https://github.com/gohugoio/hugo/releases   创建一个Hugo文件夹，打开并创建子文件夹bin,sites(以后在本地写博客的位置)，将压缩包解压到bin文件夹中
-  将hugo添加到系统路径
- 打开系统高级设置-&amp;gt;环境变量，点击 用户变量中的Path，点击编辑，点击右上角新建，将上面的bin文件夹的地址复制粘贴，回车键，点击确定    验证是否安装成功 git bash中输入
- hugo version
-   4.创建远程仓库   注册gitee账号
-  点击右上角“+”号新建仓库
-  自定义仓库名（无需跟用户名相同）
-  是否开源：公开
-  创建
-现在你有了自己的仓库，记得记下仓库地址，后边要用到哦~
-  5.搭建博客 （以下所有命令都在git bash中输入）   新建博客
-在sites文件夹中</description>
+      <guid>/2020/10/hugo-gitee-%E6%9E%84%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2.html</guid>
+      <description>&lt;h1 id=&#34;用hugo在gitee上构建博客windows环境下&#34;&gt;用Hugo在gitee上构建博客（Windows环境下）&lt;/h1&gt;
+&lt;p&gt;大家好！这是我第一次在gitee上搭建博客，也是我第一次写博客。作为一个博客小白，我在搭建博客的过程中走了很多弯路，但也收获了丰富的经验。现在我把自己搭建博客的过程分享给大家，希望能帮助到有需要的人。当然其中还有很多不足之处，欢迎各位大佬指教！&lt;/p&gt;</description>
     </item>
     
   </channel>

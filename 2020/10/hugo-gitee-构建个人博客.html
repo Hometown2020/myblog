@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>Hugo&#43;gitee 构建个人博客 | My blog</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="(Windows环境下）">
+    <meta name="generator" content="Hugo 0.75.1" />
+    
+    
+      <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+    
+
+    
+    
+      <link href="../../dist/css/app.4fc0b62e4b82c997bb0041217cd6b979.css" rel="stylesheet">
+    
+
+    
+
+    
+      
+
+    
+
+    
+    
+    <meta property="og:title" content="Hugo&#43;gitee 构建个人博客" />
+<meta property="og:description" content="(Windows环境下）" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/2020/10/hugo-gitee-%E6%9E%84%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2.html" />
+<meta property="article:published_time" content="2020-10-21T13:40:08+00:00" />
+<meta property="article:modified_time" content="2020-10-21T13:40:08+00:00" />
+<meta itemprop="name" content="Hugo&#43;gitee 构建个人博客">
+<meta itemprop="description" content="(Windows环境下）">
+<meta itemprop="datePublished" content="2020-10-21T13:40:08+00:00" />
+<meta itemprop="dateModified" content="2020-10-21T13:40:08+00:00" />
+<meta itemprop="wordCount" content="195">
+
+
+
+<meta itemprop="keywords" content="hugo gitee blog," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Hugo&#43;gitee 构建个人博客"/>
+<meta name="twitter:description" content="(Windows环境下）"/>
+
+	
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  
+  
+  <header class="cover bg-top" style="background-image: url('images/sh.jpg');">
+    <div class="pb3-m pb6-l bg-black-60">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="../../" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        My blog
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+        <ul class="pl0 mr3">
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="../../" title="首页 page">
+              首页
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="../../about.html" title="About page">
+              About
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="../../post.html" title="Articles page">
+              Articles
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="../../contact.html" title="Contact page">
+              Contact
+            </a>
+          </li>
+          
+        </ul>
+      
+      
+
+
+
+
+<a href="https://twitter.com/GoHugoIO" target="_blank" class="link-transition twitter link dib z-999 pt3 pt0-l mr1" title="Twitter link" rel="noopener" aria-label="follow on Twitter——Opens in a new window">
+  <svg height="32px"  style="enable-background:new 0 0 67 67;" version="1.1" viewBox="0 0 67 67" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M37.167,22.283c-2.619,0.953-4.274,3.411-4.086,6.101  l0.063,1.038l-1.048-0.127c-3.813-0.487-7.145-2.139-9.974-4.915l-1.383-1.377l-0.356,1.017c-0.754,2.267-0.272,4.661,1.299,6.271  c0.838,0.89,0.649,1.017-0.796,0.487c-0.503-0.169-0.943-0.296-0.985-0.233c-0.146,0.149,0.356,2.076,0.754,2.839  c0.545,1.06,1.655,2.097,2.871,2.712l1.027,0.487l-1.215,0.021c-1.173,0-1.215,0.021-1.089,0.467  c0.419,1.377,2.074,2.839,3.918,3.475l1.299,0.444l-1.131,0.678c-1.676,0.976-3.646,1.526-5.616,1.568  C19.775,43.256,19,43.341,19,43.405c0,0.211,2.557,1.397,4.044,1.864c4.463,1.377,9.765,0.783,13.746-1.568  c2.829-1.673,5.657-5,6.978-8.221c0.713-1.716,1.425-4.851,1.425-6.354c0-0.975,0.063-1.102,1.236-2.267  c0.692-0.678,1.341-1.419,1.467-1.631c0.21-0.403,0.188-0.403-0.88-0.043c-1.781,0.636-2.033,0.551-1.152-0.402  c0.649-0.678,1.425-1.907,1.425-2.267c0-0.063-0.314,0.042-0.671,0.233c-0.377,0.212-1.215,0.53-1.844,0.72l-1.131,0.361l-1.027-0.7  c-0.566-0.381-1.361-0.805-1.781-0.932C39.766,21.902,38.131,21.944,37.167,22.283z M33,64C16.432,64,3,50.569,3,34S16.432,4,33,4  s30,13.431,30,30S49.568,64,33,64z" style="fill-rule:evenodd;clip-rule:evenodd;fill:;"/></svg>
+
+<span class="new-window"><svg  height="8px"  style="enable-background:new 0 0 1000 1000;" version="1.1" viewBox="0 0 1000 1000" width="8px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+<path d="M598 128h298v298h-86v-152l-418 418-60-60 418-418h-152v-86zM810 810v-298h86v298c0 46-40 86-86 86h-596c-48 0-86-40-86-86v-596c0-46 38-86 86-86h298v86h-298v596h596z" style="fill-rule:evenodd;clip-rule:evenodd;fill:;"/>
+</svg>
+</span></a>
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+  </div>
+</nav>
+
+      <div class="tc-l pv6 ph3 ph4-ns">
+        
+          <h1 class="f2 f1-l fw2 white-90 mb0 lh-title">Hugo&#43;gitee 构建个人博客</h1>
+          
+            <h2 class="fw1 f5 f3-l white-80 measure-wide-l center lh-copy mt3 mb4">
+              (Windows环境下）
+            </h2>
+          
+        
+      </div>
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked">
+          
+        ARTICLES
+      </aside>
+      
+
+
+
+
+  <div id="sharing" class="mt3">
+
+    
+    <a href="https://www.facebook.com/sharer.php?u=/2020/10/hugo-gitee-%E6%9E%84%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2.html" class="facebook no-underline" aria-label="share on Facebook">
+      <svg height="32px"  style="enable-background:new 0 0 67 67;" version="1.1" viewBox="0 0 67 67" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M28.765,50.32h6.744V33.998h4.499l0.596-5.624h-5.095  l0.007-2.816c0-1.466,0.14-2.253,2.244-2.253h2.812V17.68h-4.5c-5.405,0-7.307,2.729-7.307,7.317v3.377h-3.369v5.625h3.369V50.32z   M33,64C16.432,64,3,50.569,3,34S16.432,4,33,4s30,13.431,30,30S49.568,64,33,64z" style="fill-rule:evenodd;clip-rule:evenodd;"/></svg>
+
+    </a>
+
+    
+    
+    <a href="https://twitter.com/share?url=../../2020/10/hugo-gitee-%E6%9E%84%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2.html&amp;text=Hugo&#43;gitee%20%e6%9e%84%e5%bb%ba%e4%b8%aa%e4%ba%ba%e5%8d%9a%e5%ae%a2" class="twitter no-underline" aria-label="share on Twitter">
+      <svg height="32px"  style="enable-background:new 0 0 67 67;" version="1.1" viewBox="0 0 67 67" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M37.167,22.283c-2.619,0.953-4.274,3.411-4.086,6.101  l0.063,1.038l-1.048-0.127c-3.813-0.487-7.145-2.139-9.974-4.915l-1.383-1.377l-0.356,1.017c-0.754,2.267-0.272,4.661,1.299,6.271  c0.838,0.89,0.649,1.017-0.796,0.487c-0.503-0.169-0.943-0.296-0.985-0.233c-0.146,0.149,0.356,2.076,0.754,2.839  c0.545,1.06,1.655,2.097,2.871,2.712l1.027,0.487l-1.215,0.021c-1.173,0-1.215,0.021-1.089,0.467  c0.419,1.377,2.074,2.839,3.918,3.475l1.299,0.444l-1.131,0.678c-1.676,0.976-3.646,1.526-5.616,1.568  C19.775,43.256,19,43.341,19,43.405c0,0.211,2.557,1.397,4.044,1.864c4.463,1.377,9.765,0.783,13.746-1.568  c2.829-1.673,5.657-5,6.978-8.221c0.713-1.716,1.425-4.851,1.425-6.354c0-0.975,0.063-1.102,1.236-2.267  c0.692-0.678,1.341-1.419,1.467-1.631c0.21-0.403,0.188-0.403-0.88-0.043c-1.781,0.636-2.033,0.551-1.152-0.402  c0.649-0.678,1.425-1.907,1.425-2.267c0-0.063-0.314,0.042-0.671,0.233c-0.377,0.212-1.215,0.53-1.844,0.72l-1.131,0.361l-1.027-0.7  c-0.566-0.381-1.361-0.805-1.781-0.932C39.766,21.902,38.131,21.944,37.167,22.283z M33,64C16.432,64,3,50.569,3,34S16.432,4,33,4  s30,13.431,30,30S49.568,64,33,64z" style="fill-rule:evenodd;clip-rule:evenodd;fill:;"/></svg>
+
+    </a>
+
+    
+    <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=../../2020/10/hugo-gitee-%E6%9E%84%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2.html&amp;title=Hugo&#43;gitee%20%e6%9e%84%e5%bb%ba%e4%b8%aa%e4%ba%ba%e5%8d%9a%e5%ae%a2" class="linkedin no-underline" aria-label="share on LinkedIn">
+      <svg  height="32px"  style="enable-background:new 0 0 65 65;" version="1.1" viewBox="0 0 65 65" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <path d="M50.837,48.137V36.425c0-6.275-3.35-9.195-7.816-9.195  c-3.604,0-5.219,1.983-6.119,3.374V27.71h-6.79c0.09,1.917,0,20.427,0,20.427h6.79V36.729c0-0.609,0.044-1.219,0.224-1.655  c0.49-1.22,1.607-2.483,3.482-2.483c2.458,0,3.44,1.873,3.44,4.618v10.929H50.837z M22.959,24.922c2.367,0,3.842-1.57,3.842-3.531  c-0.044-2.003-1.475-3.528-3.797-3.528s-3.841,1.524-3.841,3.528c0,1.961,1.474,3.531,3.753,3.531H22.959z M34,64  C17.432,64,4,50.568,4,34C4,17.431,17.432,4,34,4s30,13.431,30,30C64,50.568,50.568,64,34,64z M26.354,48.137V27.71h-6.789v20.427  H26.354z" style="fill-rule:evenodd;clip-rule:evenodd;fill:;"/>
+</svg>
+
+    </a>
+  </div>
+
+
+      <h1 class="f1 athelas mt3 mb1">Hugo&#43;gitee 构建个人博客</h1>
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2020-10-21T13:40:08Z">October 21, 2020</time>
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l w-two-thirds-l"><h1 id="用hugo在gitee上构建博客windows环境下">用Hugo在gitee上构建博客（Windows环境下）</h1>
+<p>大家好！这是我第一次在gitee上搭建博客，也是我第一次写博客。作为一个博客小白，我在搭建博客的过程中走了很多弯路，但也收获了丰富的经验。现在我把自己搭建博客的过程分享给大家，希望能帮助到有需要的人。当然其中还有很多不足之处，欢迎各位大佬指教！</p>
+<h2 id="1为什么要用gitee">1.为什么要用gitee？</h2>
+<p>相信很多朋友都觉得用GitHub搭建博客会更好，那为什么还要使用gitee呢，下面我总结了几点使用gitee的优点：</p>
+<ol>
+<li><strong>更流畅的访问</strong>  由于某些众所周知的原因，GitHub有些时候可能无法访问或访问缓慢，gitee由于服务器在国内，访问速度还是很不错的；（呀！在小编写这篇博客的当天有很多朋友表示无法访问GitHub~）</li>
+<li><strong>私有仓库</strong> 相比于GitHub，gitee提供了私有仓库的功能，给代码在网上的托管提供了更多的选择。
+(更新：GitHub现在好像也支持私有仓库了)</li>
+</ol>
+<h2 id="2安装git">2.安装git</h2>
+<ul>
+<li>安装地址：<a href="https://git-scm.com/download/win">https://git-scm.com/download/win</a></li>
+<li>安装时一路next就完事了</li>
+<li>成功后右键可以看到 git bash</li>
+</ul>
+<h2 id="3安装hugo">3.安装Hugo</h2>
+<ul>
+<li>
+<p>安装地址<a href="https://github.com/gohugoio/hugo/releases">https://github.com/gohugoio/hugo/releases</a>
+<img src="https://img-blog.csdnimg.cn/20201004204804556.jpg#pic_left" alt="下载这一个"></p>
+</li>
+<li>
+<p>创建一个Hugo文件夹，打开并创建子文件夹bin,sites(以后在本地写博客的位置)，将压缩包解压到bin文件夹中</p>
+</li>
+<li>
+<p>将hugo添加到系统路径</p>
+<ul>
+<li>打开系统高级设置-&gt;环境变量，点击 用户变量中的Path，点击编辑，点击右上角新建，将上面的bin文件夹的地址复制粘贴，回车键，点击确定</li>
+</ul>
+</li>
+<li>
+<p>验证是否安装成功 <em>git bash中输入</em></p>
+<blockquote>
+<p>hugo version</p>
+</blockquote>
+</li>
+</ul>
+<h2 id="4创建远程仓库">4.创建远程仓库</h2>
+<ul>
+<li>
+<p>注册gitee账号</p>
+</li>
+<li>
+<p>点击右上角“+”号新建仓库</p>
+</li>
+<li>
+<p>自定义仓库名（无需跟用户名相同）</p>
+</li>
+<li>
+<p>是否开源：公开</p>
+</li>
+<li>
+<p>创建</p>
+<p><em>现在你有了自己的仓库，记得记下仓库地址，后边要用到哦~</em></p>
+</li>
+</ul>
+<h2 id="5搭建博客--以下所有命令都在git-bash中输入">5.搭建博客  （以下所有命令都在git bash中输入）</h2>
+<ul>
+<li>
+<p>新建博客</p>
+<p>在sites文件夹中</p>
+<blockquote>
+<p>hugo new site myblog</p>
+</blockquote>
+<p><em><code>myblog</code>是博客名，可自定义，本文以此为例</em></p>
+</li>
+<li>
+<p>设置主题</p>
+<ul>
+<li>Hugo博客主题下载库:<a href="https://themes.gohugo.io/">https://themes.gohugo.io/</a></li>
+<li>找到自己喜欢的主题后
+<ul>
+<li>
+<p>常规操作：Download后解压，打开，将文件夹名的“-master”去掉，再整个移到<code>myblog</code>的<code>themes</code>文件夹里</p>
+</li>
+<li>
+<p>命令行操作：</p>
+<blockquote>
+<p>cd themes
+git clone <a href="https://github.com/jbub/ghostwriter">https://github.com/jbub/ghostwriter</a></p>
+</blockquote>
+<p><em>此处以主题 <code>ghostwriter</code>为例</em></p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>将<code>themes/exampleSite</code>文件夹里的内容复制粘贴到<code>myblog</code>中
++<em>注意，如果复制过来的config文件的后缀名是.yml，则删除原来的config.toml文件，否则直接替换即可</em></p>
+</li>
+<li>
+<p>修改config.文件的<code>baseUrl</code>，改为gitee仓库的地址(记得以“/”结尾)(不用加.git)(不要出现多余空格)，添加配置</p>
+<ul>
+<li>添加最后三行![配置](<a href="https://img-blog.csdnimg.cn/20201004212342333.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1OTc1NzU3,size_16,color_FFFFFF,t_70#pic_center">https://img-blog.csdnimg.cn/20201004212342333.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1OTc1NzU3,size_16,color_FFFFFF,t_70#pic_center</a> =400x200)</li>
+</ul>
+</li>
+<li>
+<p>查看主题效果</p>
+<ul>
+<li>在<code>myblog</code>中
+<blockquote>
+<p>hugo server -t ghostwriter &ndash;buildDrafts</p>
+</blockquote>
+</li>
+<li>将末尾的<code>http://localhost:1313</code>复制到本地浏览器中，回车(<em>注意此时git bush保持打开；推荐使用谷歌浏览器</em>)</li>
+<li>注意：git bush上的复制粘贴要右键copy/paste</li>
+</ul>
+</li>
+<li>
+<p>创建自己的博客文章（心急的同学可先跳过此步）</p>
+<ul>
+<li>添加博客
+<ul>
+<li>
+<p>打开<code>myblog</code>/<code>content</code>/<code>post</code>,新建blog.md(博客源文件)</p>
+</li>
+<li>
+<p>用vscode, Typora, Notepad++等软件打开 blog.md (如果都没有，记事本也是可以的)</p>
+</li>
+<li>
+<p>开头写入
+![博客开头](<a href="https://img-blog.csdnimg.cn/20201004213607143.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1OTc1NzU3,size_16,color_FFFFFF,t_70#pic_left">https://img-blog.csdnimg.cn/20201004213607143.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1OTc1NzU3,size_16,color_FFFFFF,t_70#pic_left</a> =300x180)</p>
+</li>
+<li>
+<p>按markdown的语法编写具体内容</p>
+</li>
+<li>
+<p>回到<code>myblog</code>文件夹，</p>
+<blockquote>
+<p>hugo server -t ghostwriter &ndash;buildDrafts</p>
+</blockquote>
+</li>
+<li>
+<p>将末尾的<code>http://localhost:1313</code>复制到本地浏览器中，回车，即可预览自己的博客</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>将本地博客部署到gitee上</p>
+<ul>
+<li>
+<p>在<code>myblog</code>文件夹下</p>
+<blockquote>
+<p>hugo &ndash;theme=ghostwriter &ndash;baseUrl=&quot;(仓库地址)&quot; &ndash;buildDrafts</p>
+</blockquote>
+</li>
+<li>
+<p>在<code>myblog</code>中会生成<code>public</code>文件夹</p>
+</li>
+<li>
+<pre><code>    1.cd public
+  2.git init                          //初始化本地仓库
+  3.git add .						  //将public文件夹下的所有文件放入缓存流中等待提交，注意此处空一格有个点
+  4.git commit -m &quot;xx&quot;                //把缓存内容放进发送头，仍为待发送状态，“xx”为对本次上传作的说明
+  5.git remote add origin (仓库地址)   //绑定了.git配置文件夹对应的远端服务器
+  6.git push -u origin master         //推送到gitee
+</code></pre>
+<p>注意</p>
+<ul>
+<li>
+<p>执行<code>git add .</code>前最好先看下<code>.gitignore</code>文件是否限制了上传的内容(会导致在gitee上显示博客是出现404),如果是的话修改为<img src="https://img-blog.csdnimg.cn/2020101420394098.png#pic_center" alt="在这里插入图片描述"></p>
+<ul>
+<li>解释：这个文件是用来书写忽略规则的（忽略的文件不会上传到gitee上）</li>
+<li>以“#”号开头表示解释，即文件实际上没有忽略规则，自然就都上传啦~(当然也可以直接将这个文件删除)</li>
+<li>如果不想每次都修改的话，可以修改static文件夹中.gitignore文件</li>
+</ul>
+</li>
+<li>
+<p>如果出现警告![在这里插入图片描述](<a href="https://img-blog.csdnimg.cn/20201004220248890.jpg#pic_center">https://img-blog.csdnimg.cn/20201004220248890.jpg#pic_center</a> =400x150)
+输入</p>
+<blockquote>
+<p>git config core.autocrlf false //仅对当前git仓库有效
+或 git config &ndash;global core.autocrlf false //全局有效</p>
+</blockquote>
+</li>
+<li>
+<p>如果只要上传某个文件，输入</p>
+<blockquote>
+<p>git add xxx(文件名)</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li>
+<p>查看gitee上的博客</p>
+<ul>
+<li>
+<p>点击gitee右上方的服务-&gt;Gitee pages，强制使用HTTPS,点击启动，打开生成的网址，就可以看到自己写的博客了</p>
+</li>
+<li>
+<p>如果发现网页渲染失败即没有主题，先刷新一下，看是否有效；如果还是无效，打开浏览器的开发者工具，在head中看.css链接是否仓库地址gitee.io后是否缺少一个“/”，如果少了，在本地myblog文件夹中config.toml文件中将baseUrl的地址最后加上一个“/”，再次上传public文件夹的内容<img src="https://img-blog.csdnimg.cn/20201004221025557.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1OTc1NzU3,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
+</li>
+<li>
+<p>如果还是没有渲染，可将本地的config.toml文件里的baseUrl注释掉（注释方法：在行首输入“## ”），删除public文件夹，再重新部署到gitee上，部署前先把远程仓库清空，然后命令</p>
+<blockquote>
+<p>hugo &ndash;theme=ghostwriter &ndash;baseUrl=&quot;(仓库地址)&quot; &ndash;buildDrafts</p>
+</blockquote>
+<p>改为</p>
+<blockquote>
+<p>hugo &ndash;theme=ghostwriter &ndash;buildDrafts</p>
+</blockquote>
+<p>然后就是正常的部署操作了。</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>本地修改后再次上传</p>
+<ul>
+<li>
+<p><code>myblog</code>中</p>
+<pre><code>   1.hugo                    //编译站点（要在本地浏览器查看，则使用 hugo server）
+   2.cd public
+   3.git add .
+   4.git commit -m “xxx”
+   5.git push -u origin master
+</code></pre>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="6感言">6.感言</h2>
+<p>至此博客搭建大功告成！</p>
+<p>博客的搭建过程也许不会那么顺利，各种各样的bug可能会让人怀疑人生，但坚持下来，看着自己一手搭建的博客，你会觉得之前付出的一切都是值得的！这也正是我们技术人的骄傲。</p>
+<p>第一次写博客，错误在所难免，欢迎各位指正，不胜感激！</p>
+<p>如果有小伙伴对本文感兴趣或者有什么想法，可以私聊小编，大家一起研究探讨~</p>
+<p>PS：经过一轮搭建，你是否get到了如何不建博客只上传文件，没错，就是省去跟博客有关的所有步骤，快上机试试吧！</p>
+<p>Reference
+[1]: <a href="https://blog.csdn.net/man_zuo/article/details/88651416">https://blog.csdn.net/man_zuo/article/details/88651416</a>
+[2]: <a href="https://blog.csdn.net/weixin_43691058/article/details/101772871">https://blog.csdn.net/weixin_43691058/article/details/101772871</a></p><ul class="pa0">
+  
+   <li class="list">
+     <a href="../../tags/hugo-gitee-blog" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">hugo gitee blog</a>
+   </li>
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      <div id="commento"></div>
+<script defer src="https://cdn.commento.io/js/commento.js"></script>
+
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="" >
+    &copy;  My blog 2020 
+  </a>
+    <div>
+
+
+
+
+<a href="https://twitter.com/GoHugoIO" target="_blank" class="link-transition twitter link dib z-999 pt3 pt0-l mr1" title="Twitter link" rel="noopener" aria-label="follow on Twitter——Opens in a new window">
+  <svg height="32px"  style="enable-background:new 0 0 67 67;" version="1.1" viewBox="0 0 67 67" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M37.167,22.283c-2.619,0.953-4.274,3.411-4.086,6.101  l0.063,1.038l-1.048-0.127c-3.813-0.487-7.145-2.139-9.974-4.915l-1.383-1.377l-0.356,1.017c-0.754,2.267-0.272,4.661,1.299,6.271  c0.838,0.89,0.649,1.017-0.796,0.487c-0.503-0.169-0.943-0.296-0.985-0.233c-0.146,0.149,0.356,2.076,0.754,2.839  c0.545,1.06,1.655,2.097,2.871,2.712l1.027,0.487l-1.215,0.021c-1.173,0-1.215,0.021-1.089,0.467  c0.419,1.377,2.074,2.839,3.918,3.475l1.299,0.444l-1.131,0.678c-1.676,0.976-3.646,1.526-5.616,1.568  C19.775,43.256,19,43.341,19,43.405c0,0.211,2.557,1.397,4.044,1.864c4.463,1.377,9.765,0.783,13.746-1.568  c2.829-1.673,5.657-5,6.978-8.221c0.713-1.716,1.425-4.851,1.425-6.354c0-0.975,0.063-1.102,1.236-2.267  c0.692-0.678,1.341-1.419,1.467-1.631c0.21-0.403,0.188-0.403-0.88-0.043c-1.781,0.636-2.033,0.551-1.152-0.402  c0.649-0.678,1.425-1.907,1.425-2.267c0-0.063-0.314,0.042-0.671,0.233c-0.377,0.212-1.215,0.53-1.844,0.72l-1.131,0.361l-1.027-0.7  c-0.566-0.381-1.361-0.805-1.781-0.932C39.766,21.902,38.131,21.944,37.167,22.283z M33,64C16.432,64,3,50.569,3,34S16.432,4,33,4  s30,13.431,30,30S49.568,64,33,64z" style="fill-rule:evenodd;clip-rule:evenodd;fill:;"/></svg>
+
+<span class="new-window"><svg  height="8px"  style="enable-background:new 0 0 1000 1000;" version="1.1" viewBox="0 0 1000 1000" width="8px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+<path d="M598 128h298v298h-86v-152l-418 418-60-60 418-418h-152v-86zM810 810v-298h86v298c0 46-40 86-86 86h-596c-48 0-86-40-86-86v-596c0-46 38-86 86-86h298v86h-298v596h596z" style="fill-rule:evenodd;clip-rule:evenodd;fill:;"/>
+</svg>
+</span></a>
+
+
+
+
+
+
+
+
+
+
+
+</div>
+  </div>
+</footer>
+
+    
+
+  <script src="../../dist/js/app.3fc0f988d21662902933.js"></script>
+
+
+  </body>
+</html>
